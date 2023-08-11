@@ -5,11 +5,41 @@ import * as CounterActions from '../actions/counter.actions';
 @Component({
     selector: 'app-counter',
     template: `
-    <button (click)="increment()">Increment</button>
-    <div>Current Count: {{ count$ | async }}</div>
-    <button (click)="decrement()">Decrement</button>
-    <button (click)="reset()">Reset</button>
-  `,
+    <div class="counter-container">
+      <button (click)="increment()" class="counter-button">Increment</button>      
+      <button (click)="decrement()" class="counter-button">Decrement</button>
+      <div class="counter-display">Current Count: {{ count$ | async }}</div>
+      <button (click)="reset()" class="counter-button">Reset</button>
+    </div>
+    `,
+    styles: [`
+        .counter-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            max-width: 400px;
+        }
+        .counter-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            outline: none;
+            border-radius: 5px;
+        }
+        .counter-button:hover {
+            background-color: #45a049;
+        }
+        .counter-display {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    `]
 })
 export class CounterComponent {
     count$ = this.store.select('counter');

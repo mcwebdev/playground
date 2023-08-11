@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1691712517387,
@@ -16,6 +16,26 @@
                 {
                     "date": 1691716943996,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import { Component } from '@angular/core';\r\n import { Store } from '@ngrx/store';\r\n import * as CounterActions from '../actions/counter.actions';\r\n-import { AngularFirestore } from '@angular/fire/compat/firestore';\r\n \r\n @Component({\r\n     selector: 'app-counter',\r\n     template: `\r\n@@ -14,27 +13,18 @@\n })\r\n export class CounterComponent {\r\n     count$ = this.store.select('counter');\r\n \r\n-    constructor(private store: Store<{ counter: number }>, private firestore: AngularFirestore) { }\r\n+    constructor(private store: Store<{ counter: number }>) { }\r\n \r\n     increment() {\r\n         this.store.dispatch(CounterActions.increment());\r\n-        this.count$.subscribe(count => {\r\n-            this.firestore.collection('counters').add({ value: count });\r\n-        });\r\n     }\r\n \r\n     decrement() {\r\n         this.store.dispatch(CounterActions.decrement());\r\n-        this.count$.subscribe(count => {\r\n-            this.firestore.collection('counters').add({ value: count });\r\n-        });\r\n     }\r\n \r\n     reset() {\r\n         this.store.dispatch(CounterActions.reset());\r\n-        this.count$.subscribe(count => {\r\n-            this.firestore.collection('counters').add({ value: count });\r\n-        });\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1691723529046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,41 @@\n \r\n @Component({\r\n     selector: 'app-counter',\r\n     template: `\r\n-    <button (click)=\"increment()\">Increment</button>\r\n-    <div>Current Count: {{ count$ | async }}</div>\r\n-    <button (click)=\"decrement()\">Decrement</button>\r\n-    <button (click)=\"reset()\">Reset</button>\r\n-  `,\r\n+    <div class=\"counter-container\">\r\n+      <button (click)=\"increment()\" class=\"counter-button\">Increment</button>\r\n+      <div class=\"counter-display\">Current Count: {{ count$ | async }}</div>\r\n+      <button (click)=\"decrement()\" class=\"counter-button\">Decrement</button>\r\n+      <button (click)=\"reset()\" class=\"counter-button\">Reset</button>\r\n+    </div>\r\n+    `,\r\n+    styles: [`\r\n+        .counter-container {\r\n+            display: flex;\r\n+            flex-direction: column;\r\n+            align-items: center;\r\n+            gap: 10px;\r\n+            font-family: Arial, sans-serif;\r\n+        }\r\n+        .counter-button {\r\n+            padding: 10px 20px;\r\n+            border: none;\r\n+            background-color: #4CAF50;\r\n+            color: white;\r\n+            cursor: pointer;\r\n+            font-size: 16px;\r\n+            transition: background-color 0.3s;\r\n+            outline: none;\r\n+        }\r\n+        .counter-button:hover {\r\n+            background-color: #45a049;\r\n+        }\r\n+        .counter-display {\r\n+            font-size: 18px;\r\n+            font-weight: bold;\r\n+        }\r\n+    `]\r\n })\r\n export class CounterComponent {\r\n     count$ = this.store.select('counter');\r\n \r\n"
+                },
+                {
+                    "date": 1691723599247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,8 @@\n     styles: [`\r\n         .counter-container {\r\n             display: flex;\r\n             flex-direction: column;\r\n-            align-items: center;\r\n             gap: 10px;\r\n             font-family: Arial, sans-serif;\r\n         }\r\n         .counter-button {\r\n"
+                },
+                {
+                    "date": 1691723618831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,10 @@\n             display: flex;\r\n             flex-direction: column;\r\n             gap: 10px;\r\n             font-family: Arial, sans-serif;\r\n+            width: 100%;\r\n+            max-width: 400px;\r\n         }\r\n         .counter-button {\r\n             padding: 10px 20px;\r\n             border: none;\r\n"
+                },
+                {
+                    "date": 1691723634447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n             cursor: pointer;\r\n             font-size: 16px;\r\n             transition: background-color 0.3s;\r\n             outline: none;\r\n+            border-radius: 5px;\r\n         }\r\n         .counter-button:hover {\r\n             background-color: #45a049;\r\n         }\r\n"
+                },
+                {
+                    "date": 1691723652504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,11 @@\n     selector: 'app-counter',\r\n     template: `\r\n     <div class=\"counter-container\">\r\n       <button (click)=\"increment()\" class=\"counter-button\">Increment</button>\r\n+      \r\n+      <button (click)=\"decrement()\" class=\"counter-button\">Decrement</button>\r\n       <div class=\"counter-display\">Current Count: {{ count$ | async }}</div>\r\n-      <button (click)=\"decrement()\" class=\"counter-button\">Decrement</button>\r\n       <button (click)=\"reset()\" class=\"counter-button\">Reset</button>\r\n     </div>\r\n     `,\r\n     styles: [`\r\n"
                 }
             ],
             "date": 1691712517387,
