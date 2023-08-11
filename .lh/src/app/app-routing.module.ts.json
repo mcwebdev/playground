@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/app-routing.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1691707443592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691707968432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import { NgModule } from '@angular/core';\n+import { ExtraOptions, RouterModule, Routes } from '@angular/router';\n+\n+const routes: Routes = [\n+  {\n+    path: 'pages',\n+    loadChildren: () => import('./pages/pages.module')\n+      .then(m => m.PagesModule),\n+  },\n+  { path: '', redirectTo: 'pages', pathMatch: 'full' },\n+  { path: '**', redirectTo: 'pages' },\n+];\n+const config: ExtraOptions = {\n+  useHash: false,\n+};\n+@NgModule({\n+  imports: [RouterModule.forRoot(routes, config)],\n+  exports: [RouterModule]\n+})\n+export class AppRoutingModule { }\n"
+                }
+            ],
+            "date": 1691707443592,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [\n  {\n    path: 'pages',\n    loadChildren: () => import('./pages/pages.module')\n      .then(m => m.PagesModule),\n  },\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n"
+        }
+    ]
+}

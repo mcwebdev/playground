@@ -1,0 +1,18 @@
+{
+    "sourceFile": "firebase.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1691716702303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1691716702303,
+            "name": "Commit-0",
+            "content": "{\n  \"database\": {\n    \"rules\": \"database.rules.json\"\n  },\n  \"firestore\": {\n    \"rules\": \"firestore.rules\",\n    \"indexes\": \"firestore.indexes.json\"\n  },\n  \"functions\": [\n    {\n      \"source\": \"functions\",\n      \"codebase\": \"default\",\n      \"ignore\": [\n        \"node_modules\",\n        \".git\",\n        \"firebase-debug.log\",\n        \"firebase-debug.*.log\"\n      ],\n      \"predeploy\": [\n        \"npm --prefix \\\"$RESOURCE_DIR\\\" run build\"\n      ]\n    }\n  ],\n  \"hosting\": {\n    \"public\": \"dist/ngrx-playground\",\n    \"ignore\": [\n      \"firebase.json\",\n      \"**/.*\",\n      \"**/node_modules/**\"\n    ],\n    \"rewrites\": [\n      {\n        \"source\": \"**\",\n        \"destination\": \"/index.html\"\n      }\n    ]\n  },\n  \"storage\": {\n    \"rules\": \"storage.rules\"\n  },\n  \"remoteconfig\": {\n    \"template\": \"remoteconfig.template.json\"\n  }\n}\n"
+        }
+    ]
+}

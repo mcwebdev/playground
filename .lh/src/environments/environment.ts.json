@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/environments/environment.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1691714539607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691718392745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,12 @@\n-// Import the functions you need from the SDKs you need\r\n-import { initializeApp } from \"firebase/app\";\r\n-import { getAnalytics } from \"firebase/analytics\";\r\n-// TODO: Add SDKs for Firebase products that you want to use\r\n-// https://firebase.google.com/docs/web/setup#available-libraries\r\n-\r\n-// Your web app's Firebase configuration\r\n-// For Firebase JS SDK v7.20.0 and later, measurementId is optional\r\n-const firebaseConfig = {\r\n-    apiKey: \"AIzaSyC994RjzdAIjuVQq56ZfEgzcX8wLvXGOCU\",\r\n-    authDomain: \"dashboards-fa251.firebaseapp.com\",\r\n-    projectId: \"dashboards-fa251\",\r\n-    storageBucket: \"dashboards-fa251.appspot.com\",\r\n-    messagingSenderId: \"884594161390\",\r\n-    appId: \"1:884594161390:web:e23cd1e01203135fdce5ff\",\r\n-    measurementId: \"G-WLSJEZMJPL\"\r\n+export const environment = {\r\n+    // Other environment-specific configurations\r\n+    firebase: {\r\n+        apiKey: \"AIzaSyC994RjzdAIjuVQq56ZfEgzcX8wLvXGOCU\",\r\n+        authDomain: \"dashboards-fa251.firebaseapp.com\",\r\n+        projectId: \"dashboards-fa251\",\r\n+        storageBucket: \"dashboards-fa251.appspot.com\",\r\n+        messagingSenderId: \"884594161390\",\r\n+        appId: \"1:884594161390:web:e23cd1e01203135fdce5ff\",\r\n+        measurementId: \"G-WLSJEZMJPL\"\r\n+    }\r\n };\r\n-\r\n-// Initialize Firebase\r\n-const app = initializeApp(firebaseConfig);\r\n-const analytics = getAnalytics(app);\r\n"
+                }
+            ],
+            "date": 1691714539607,
+            "name": "Commit-0",
+            "content": "// Import the functions you need from the SDKs you need\r\nimport { initializeApp } from \"firebase/app\";\r\nimport { getAnalytics } from \"firebase/analytics\";\r\n// TODO: Add SDKs for Firebase products that you want to use\r\n// https://firebase.google.com/docs/web/setup#available-libraries\r\n\r\n// Your web app's Firebase configuration\r\n// For Firebase JS SDK v7.20.0 and later, measurementId is optional\r\nconst firebaseConfig = {\r\n    apiKey: \"AIzaSyC994RjzdAIjuVQq56ZfEgzcX8wLvXGOCU\",\r\n    authDomain: \"dashboards-fa251.firebaseapp.com\",\r\n    projectId: \"dashboards-fa251\",\r\n    storageBucket: \"dashboards-fa251.appspot.com\",\r\n    messagingSenderId: \"884594161390\",\r\n    appId: \"1:884594161390:web:e23cd1e01203135fdce5ff\",\r\n    measurementId: \"G-WLSJEZMJPL\"\r\n};\r\n\r\n// Initialize Firebase\r\nconst app = initializeApp(firebaseConfig);\r\nconst analytics = getAnalytics(app);\r\n"
+        }
+    ]
+}

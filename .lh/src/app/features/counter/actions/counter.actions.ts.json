@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/features/counter/actions/counter.actions.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1691712038012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691717798546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n+// counter.actions.ts\r\n import { createAction } from '@ngrx/store';\r\n \r\n export const increment = createAction('[Counter Component] Increment');\r\n export const decrement = createAction('[Counter Component] Decrement');\r\n export const reset = createAction('[Counter Component] Reset');\r\n+export const saveCounterSuccess = createAction('[Counter Component] Save Counter Success');\r\n+export const saveCounterFailure = createAction('[Counter Component] Save Counter Failure');\r\n"
+                }
+            ],
+            "date": 1691712038012,
+            "name": "Commit-0",
+            "content": "import { createAction } from '@ngrx/store';\r\n\r\nexport const increment = createAction('[Counter Component] Increment');\r\nexport const decrement = createAction('[Counter Component] Decrement');\r\nexport const reset = createAction('[Counter Component] Reset');\r\n"
+        }
+    ]
+}

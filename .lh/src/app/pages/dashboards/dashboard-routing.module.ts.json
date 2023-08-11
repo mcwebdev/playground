@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/pages/dashboards/dashboard-routing.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1691705657962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691705679234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         path: '',\r\n         component: DashboardComponent,\r\n         children: [\r\n             {\r\n-                path: '404',\r\n+                path: 'ngrxDashboard',\r\n                 component: NgrxDashboardComponent,\r\n             },\r\n         ],\r\n     },\r\n"
+                },
+                {
+                    "date": 1691706691144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n     },\r\n ];\r\n \r\n @NgModule({\r\n-    imports: [RouterModule.forRoot(routes)],\r\n-    exports: [RouterModule]\r\n+    imports: [RouterModule.forChild(routes)],\r\n+    exports: [RouterModule],\r\n })\r\n export class DashboardRoutingModule { }\r\n"
+                }
+            ],
+            "date": 1691705657962,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { DashboardComponent } from './dashboard.component';\r\nimport { NgrxDashboardComponent } from './ngrx-dashboard/ngrx-dashboard.component';\r\nconst routes: Routes = [\r\n    {\r\n        path: '',\r\n        component: DashboardComponent,\r\n        children: [\r\n            {\r\n                path: '404',\r\n                component: NgrxDashboardComponent,\r\n            }\r\n        ],\r\n    },\r\n];\r\n\r\n@NgModule({\r\n    imports: [RouterModule.forRoot(routes)],\r\n    exports: [RouterModule]\r\n})\r\nexport class DashboardRoutingModule { }\r\n"
+        }
+    ]
+}

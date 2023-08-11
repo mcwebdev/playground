@@ -1,0 +1,18 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1691703229315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1691703229315,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"ngrx-playground\",\n  \"version\": \"0.0.0\",\n  \"scripts\": {\n    \"ng\": \"ng\",\n    \"start\": \"ng serve\",\n    \"build\": \"ng build\",\n    \"watch\": \"ng build --watch --configuration development\",\n    \"test\": \"ng test\"\n  },\n  \"private\": true,\n  \"dependencies\": {\n    \"@angular/animations\": \"^16.1.0\",\n    \"@angular/common\": \"^16.1.0\",\n    \"@angular/compiler\": \"^16.1.0\",\n    \"@angular/core\": \"^16.1.0\",\n    \"@angular/forms\": \"^16.1.0\",\n    \"@angular/platform-browser\": \"^16.1.0\",\n    \"@angular/platform-browser-dynamic\": \"^16.1.0\",\n    \"@angular/router\": \"^16.1.0\",\n    \"@ngrx/effects\": \"^16.2.0\",\n    \"@ngrx/entity\": \"^16.2.0\",\n    \"@ngrx/store\": \"^16.2.0\",\n    \"@ngrx/store-devtools\": \"^16.2.0\",\n    \"primeng\":\"16.1.0\",\n    \"rxjs\": \"~7.8.0\",\n    \"tslib\": \"^2.3.0\",\n    \"zone.js\": \"~0.13.0\"\n  },\n  \"devDependencies\": {\n    \"@angular-devkit/build-angular\": \"^16.1.4\",\n    \"@angular/cli\": \"~16.1.4\",\n    \"@angular/compiler-cli\": \"^16.1.0\",\n    \"@types/jasmine\": \"~4.3.0\",\n    \"jasmine-core\": \"~4.6.0\",\n    \"karma\": \"~6.4.0\",\n    \"karma-chrome-launcher\": \"~3.2.0\",\n    \"karma-coverage\": \"~2.2.0\",\n    \"karma-jasmine\": \"~5.1.0\",\n    \"karma-jasmine-html-reporter\": \"~2.1.0\",\n    \"typescript\": \"~5.1.3\"\n  }\n}"
+        }
+    ]
+}

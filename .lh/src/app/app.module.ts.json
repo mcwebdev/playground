@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/app.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1691704919430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691709830706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,14 +5,12 @@\n import { AppComponent } from './app.component';\n import { StoreModule } from '@ngrx/store';\n import { EffectsModule } from '@ngrx/effects';\n import { StoreDevtoolsModule } from '@ngrx/store-devtools';\n-import { CounterComponent } from './shared/components/counter/counter.component';\n \n @NgModule({\n   declarations: [\n     AppComponent,\n-    CounterComponent,\n   ],\n   imports: [\n     BrowserModule,\n     AppRoutingModule,\n"
+                },
+                {
+                    "date": 1691712437456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { NgModule, isDevMode } from '@angular/core';\n import { BrowserModule } from '@angular/platform-browser';\n-\n+import { CommonModule } from '@angular/common';\n import { AppRoutingModule } from './app-routing.module';\n import { AppComponent } from './app.component';\n import { StoreModule } from '@ngrx/store';\n import { EffectsModule } from '@ngrx/effects';\n"
+                }
+            ],
+            "date": 1691704919430,
+            "name": "Commit-0",
+            "content": "import { NgModule, isDevMode } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { StoreModule } from '@ngrx/store';\nimport { EffectsModule } from '@ngrx/effects';\nimport { StoreDevtoolsModule } from '@ngrx/store-devtools';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    StoreModule.forRoot({}, {}),\n    EffectsModule.forRoot([]),\n    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n"
+        }
+    ]
+}

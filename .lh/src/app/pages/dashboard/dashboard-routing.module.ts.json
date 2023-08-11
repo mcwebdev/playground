@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/pages/dashboard/dashboard-routing.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1691704827943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691705018253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import { NgModule } from '@angular/core';\r\n import { RouterModule, Routes } from '@angular/router';\r\n import { DashboardComponent } from './dashboard.component';\r\n-const routes: Routes = [];\r\n+const routes: Routes = [\r\n+    {data: { title: 'Dashboard' }, path: '', component: DashboardComponent}\r\n+];\r\n \r\n @NgModule({\r\n     imports: [RouterModule.forRoot(routes)],\r\n     exports: [RouterModule]\r\n"
+                },
+                {
+                    "date": 1691705183582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { NgModule } from '@angular/core';\r\n import { RouterModule, Routes } from '@angular/router';\r\n import { DashboardComponent } from './dashboard.component';\r\n const routes: Routes = [\r\n-    { data: { title: 'Dashboard' }, path: '', component: DashboardComponent }\r\n+    { data: { title: 'Dashboard' }, path: 'dashboard', component: DashboardComponent }\r\n ];\r\n \r\n @NgModule({\r\n     imports: [RouterModule.forRoot(routes)],\r\n"
+                }
+            ],
+            "date": 1691704827943,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { DashboardComponent } from './dashboard.component';\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n    imports: [RouterModule.forRoot(routes)],\r\n    exports: [RouterModule]\r\n})\r\nexport class DashboardRoutingModule { }\r\n"
+        }
+    ]
+}

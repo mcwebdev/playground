@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/features/counter/reducers/counter.reducer.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1691712165187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1691712165187,
+            "name": "Commit-0",
+            "content": "import { createReducer, on } from '@ngrx/store';\r\nimport * as CounterActions from '../actions/counter.actions';\r\n\r\nexport const counterFeatureKey = 'counter';\r\n\r\nexport const initialState = 0;\r\n\r\nexport const counterReducer = createReducer(\r\n    initialState,\r\n    on(CounterActions.increment, (state) => state + 1),\r\n    on(CounterActions.decrement, (state) => state - 1),\r\n    on(CounterActions.reset, (state) => 0)\r\n);\r\n"
+        }
+    ]
+}

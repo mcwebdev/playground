@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/pages/dashboards/ngrx-dashboard/ngrx-dashboard.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1691708337456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1691708337456,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-ngrx-dashboard',\n  templateUrl: './ngrx-dashboard.component.html',\n  styleUrls: ['./ngrx-dashboard.component.scss']\n})\nexport class NgrxDashboardComponent {\n  constructor() {\n    console.log('NgrxDashboardComponent constructor');\n  }\n}\n"
+        }
+    ]
+}

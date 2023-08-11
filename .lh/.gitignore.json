@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1691722607483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1691722607483,
+            "name": "Commit-0",
+            "content": "# See http://help.github.com/ignore-files/ for more about ignoring files.\n\n# Compiled output\n/dist\n/tmp\n/out-tsc\n/bazel-out\n\n# Node\n/node_modules\nnpm-debug.log\nyarn-error.log\n\n# IDEs and editors\n.idea/\n.project\n.classpath\n.c9/\n*.launch\n.settings/\n*.sublime-workspace\n\n# Visual Studio Code\n.vscode/*\n!.vscode/settings.json\n!.vscode/tasks.json\n!.vscode/launch.json\n!.vscode/extensions.json\n.history/*\n\n# Miscellaneous\n/.angular/cache\n.sass-cache/\n/connect.lock\n/coverage\n/libpeerconnection.log\ntestem.log\n/typings\n\n# System files\n.DS_Store\nThumbs.db\nsrc/environments/*\n"
+        }
+    ]
+}

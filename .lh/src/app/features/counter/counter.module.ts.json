@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/features/counter/counter.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1691721859965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1691721859965,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\r\nimport { StoreModule } from '@ngrx/store';\r\nimport { EffectsModule } from '@ngrx/effects';\r\nimport { counterReducer, counterFeatureKey } from './reducers/counter.reducer';\r\nimport { CounterEffects } from './effects/counter.effects';\r\n\r\n@NgModule({\r\n    imports: [\r\n        StoreModule.forFeature(counterFeatureKey, counterReducer),\r\n        EffectsModule.forFeature([CounterEffects]),\r\n    ],\r\n})\r\nexport class CounterModule { }\r\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/pages/dashboard/dashboard.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1691704827943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691705078506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n import { NgModule } from '@angular/core';\n import { CommonModule } from '@angular/common';\n import { DashboardComponent } from './dashboard.component';\n+import { DashboardRoutingModule } from './dashboard-routing.module';\n \n \n-\n @NgModule({\n   declarations: [\n     DashboardComponent\n   ],\n   imports: [\n-    CommonModule\n+    CommonModule,\n+    DashboardRoutingModule\n   ]\n })\n export class DashboardModule { }\n"
+                }
+            ],
+            "date": 1691704827943,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { DashboardComponent } from './dashboard.component';\n\n\n\n@NgModule({\n  declarations: [\n    DashboardComponent\n  ],\n  imports: [\n    CommonModule\n  ]\n})\nexport class DashboardModule { }\n"
+        }
+    ]
+}

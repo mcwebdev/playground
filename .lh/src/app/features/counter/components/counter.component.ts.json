@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/features/counter/components/counter.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1691712517387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691714249606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { Component } from '@angular/core';\r\n import { Store } from '@ngrx/store';\r\n import * as CounterActions from '../actions/counter.actions';\r\n+import { AngularFirestore } from '@angular/fire/compat/firestore';\r\n \r\n @Component({\r\n     selector: 'app-counter',\r\n     template: `\r\n@@ -13,18 +14,27 @@\n })\r\n export class CounterComponent {\r\n     count$ = this.store.select('counter');\r\n \r\n-    constructor(private store: Store<{ counter: number }>) { }\r\n+    constructor(private store: Store<{ counter: number }>, private firestore: AngularFirestore) { }\r\n \r\n     increment() {\r\n         this.store.dispatch(CounterActions.increment());\r\n+        this.count$.subscribe(count => {\r\n+            this.firestore.collection('counters').add({ value: count });\r\n+        });\r\n     }\r\n \r\n     decrement() {\r\n         this.store.dispatch(CounterActions.decrement());\r\n+        this.count$.subscribe(count => {\r\n+            this.firestore.collection('counters').add({ value: count });\r\n+        });\r\n     }\r\n \r\n     reset() {\r\n         this.store.dispatch(CounterActions.reset());\r\n+        this.count$.subscribe(count => {\r\n+            this.firestore.collection('counters').add({ value: count });\r\n+        });\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1691716943996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import { Component } from '@angular/core';\r\n import { Store } from '@ngrx/store';\r\n import * as CounterActions from '../actions/counter.actions';\r\n-import { AngularFirestore } from '@angular/fire/compat/firestore';\r\n \r\n @Component({\r\n     selector: 'app-counter',\r\n     template: `\r\n@@ -14,27 +13,18 @@\n })\r\n export class CounterComponent {\r\n     count$ = this.store.select('counter');\r\n \r\n-    constructor(private store: Store<{ counter: number }>, private firestore: AngularFirestore) { }\r\n+    constructor(private store: Store<{ counter: number }>) { }\r\n \r\n     increment() {\r\n         this.store.dispatch(CounterActions.increment());\r\n-        this.count$.subscribe(count => {\r\n-            this.firestore.collection('counters').add({ value: count });\r\n-        });\r\n     }\r\n \r\n     decrement() {\r\n         this.store.dispatch(CounterActions.decrement());\r\n-        this.count$.subscribe(count => {\r\n-            this.firestore.collection('counters').add({ value: count });\r\n-        });\r\n     }\r\n \r\n     reset() {\r\n         this.store.dispatch(CounterActions.reset());\r\n-        this.count$.subscribe(count => {\r\n-            this.firestore.collection('counters').add({ value: count });\r\n-        });\r\n     }\r\n }\r\n"
+                }
+            ],
+            "date": 1691712517387,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\nimport { Store } from '@ngrx/store';\r\nimport * as CounterActions from '../actions/counter.actions';\r\n\r\n@Component({\r\n    selector: 'app-counter',\r\n    template: `\r\n    <button (click)=\"increment()\">Increment</button>\r\n    <div>Current Count: {{ count$ | async }}</div>\r\n    <button (click)=\"decrement()\">Decrement</button>\r\n    <button (click)=\"reset()\">Reset</button>\r\n  `,\r\n})\r\nexport class CounterComponent {\r\n    count$ = this.store.select('counter');\r\n\r\n    constructor(private store: Store<{ counter: number }>) { }\r\n\r\n    increment() {\r\n        this.store.dispatch(CounterActions.increment());\r\n    }\r\n\r\n    decrement() {\r\n        this.store.dispatch(CounterActions.decrement());\r\n    }\r\n\r\n    reset() {\r\n        this.store.dispatch(CounterActions.reset());\r\n    }\r\n}\r\n"
+        }
+    ]
+}
