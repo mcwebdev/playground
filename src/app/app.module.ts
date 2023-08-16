@@ -11,6 +11,7 @@ import { CounterEffects } from './features/counter/effects/counter.effects';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { CounterModule } from './features/counter/counter.module';
+import { CartModule } from './features/cart/cart.module';
 import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { environment } from 'src/environments/environment';
     EffectsModule.forRoot([]), // No global effects
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: isDevMode() }),
     CounterModule,
+    CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

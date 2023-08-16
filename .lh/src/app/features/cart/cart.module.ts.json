@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/app/features/cart/cart.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1691978915723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691978985585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { NgModule } from '@angular/core';\n+import { BrowserModule } from '@angular/platform-browser';\n import { CommonModule } from '@angular/common';\n import { StoreModule } from '@ngrx/store';\n import { productReducer } from './reducers/reducer';\n import { ProductsComponent } from './components/products/products.component';\n@@ -12,8 +13,10 @@\n     ProductsComponent,\n     CartComponent\n   ],\n   imports: [\n-    CommonModule\n+    CommonModule,\n+    BrowserModule,\n+    StoreModule.forRoot({ product: productReducer }),\n   ]\n })\n export class CartModule { }\n"
+                },
+                {
+                    "date": 1691979648479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,14 @@\n import { BrowserModule } from '@angular/platform-browser';\n import { CommonModule } from '@angular/common';\n import { StoreModule } from '@ngrx/store';\n import { productReducer } from './reducers/reducer';\n-import { ProductsComponent } from './components/products/products.component';\n-import { CartComponent } from './components/cart/cart.component';\n \n \n \n+\n @NgModule({\n   declarations: [\n-    ProductsComponent,\n-    CartComponent\n   ],\n   imports: [\n     CommonModule,\n     BrowserModule,\n"
+                },
+                {
+                    "date": 1691980166647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n import { productReducer } from './reducers/reducer';\n \n \n \n-\n @NgModule({\n   declarations: [\n   ],\n   imports: [\n"
+                },
+                {
+                    "date": 1691980559011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,9 @@\n   imports: [\n     CommonModule,\n     BrowserModule,\n     StoreModule.forRoot({ product: productReducer }),\n+    StoreModule.forRoot({ product: productReducer })\n+\n   ]\n })\n export class CartModule { }\n"
+                },
+                {
+                    "date": 1691980581961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n   imports: [\n     CommonModule,\n     BrowserModule,\n     StoreModule.forRoot({ product: productReducer }),\n-    StoreModule.forRoot({ product: productReducer })\n \n   ]\n })\n export class CartModule { }\n"
+                },
+                {
+                    "date": 1691980817541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n   ],\n   imports: [\n     CommonModule,\n     BrowserModule,\n-    StoreModule.forRoot({ product: productReducer }),\n-\n+    StoreModule.forFeature('product', productReducer) // Corrected line\n   ]\n })\n export class CartModule { }\n"
+                },
+                {
+                    "date": 1691989051877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,18 @@\n import { BrowserModule } from '@angular/platform-browser';\n import { CommonModule } from '@angular/common';\n import { StoreModule } from '@ngrx/store';\n import { productReducer } from './reducers/reducer';\n+import { FormsModule } from '@angular/forms';\n \n \n-\n @NgModule({\n   declarations: [\n   ],\n   imports: [\n     CommonModule,\n     BrowserModule,\n+    FormsModule,\n     StoreModule.forFeature('product', productReducer) // Corrected line\n   ]\n })\n export class CartModule { }\n"
+                },
+                {
+                    "date": 1691989445665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,18 +2,16 @@\n import { BrowserModule } from '@angular/platform-browser';\n import { CommonModule } from '@angular/common';\n import { StoreModule } from '@ngrx/store';\n import { productReducer } from './reducers/reducer';\n-import { FormsModule } from '@angular/forms';\n \n \n @NgModule({\n   declarations: [\n   ],\n   imports: [\n     CommonModule,\n     BrowserModule,\n-    FormsModule,\n     StoreModule.forFeature('product', productReducer) // Corrected line\n   ]\n })\n export class CartModule { }\n"
+                }
+            ],
+            "date": 1691978915723,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { StoreModule } from '@ngrx/store';\nimport { productReducer } from './reducers/reducer';\nimport { ProductsComponent } from './components/products/products.component';\nimport { CartComponent } from './components/cart/cart.component';\n\n\n\n@NgModule({\n  declarations: [\n    ProductsComponent,\n    CartComponent\n  ],\n  imports: [\n    CommonModule\n  ]\n})\nexport class CartModule { }\n"
+        }
+    ]
+}

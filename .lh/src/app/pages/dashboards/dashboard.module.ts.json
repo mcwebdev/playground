@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1691712608741,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691979483696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,17 @@\n import { DashboardComponent } from './dashboard.component';\n import { DashboardRoutingModule } from './dashboard-routing.module';\n import { NgrxDashboardComponent } from './ngrx-dashboard/ngrx-dashboard.component';\n import { CounterComponent } from 'src/app/features/counter/components/counter.component';\n-\n+import { ProductsComponent } from 'src/app/features/cart/components/products/products.component';\n+import { CartComponent } from 'src/app/features/cart/components/cart/cart.component';\n @NgModule({\n   declarations: [\n     DashboardComponent,\n     NgrxDashboardComponent,\n-    CounterComponent\n+    CounterComponent,\n+    ProductsComponent,\n+    CartComponent\n   ],\n   imports: [\n     CommonModule,\n     DashboardRoutingModule\n"
+                },
+                {
+                    "date": 1691989429663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import { NgrxDashboardComponent } from './ngrx-dashboard/ngrx-dashboard.component';\n import { CounterComponent } from 'src/app/features/counter/components/counter.component';\n import { ProductsComponent } from 'src/app/features/cart/components/products/products.component';\n import { CartComponent } from 'src/app/features/cart/components/cart/cart.component';\n+import { FormsModule } from '@angular/forms';\n @NgModule({\n   declarations: [\n     DashboardComponent,\n     NgrxDashboardComponent,\n@@ -14,8 +15,9 @@\n     ProductsComponent,\n     CartComponent\n   ],\n   imports: [\n+    FormsModule,\n     CommonModule,\n     DashboardRoutingModule\n   ]\n })\n"
                 }
             ],
             "date": 1691712608741,

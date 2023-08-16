@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/app/features/cart/actions/actions.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1691974778229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691977754555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+import { createAction, props } from '@ngrx/store';\r\n+\r\n+export const addProductToCart = createAction(\r\n+    '[Cart] Add to Cart',\r\n+    props<{ product: { name: string, price: number } }>());\r\n+export const removeProductFromCart = createAction(\r\n+    '[Cart] Remove from Cart',\r\n+    props<{ product: { name: string, price: number } }>());\r\n"
+                },
+                {
+                    "date": 1691989214925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { createAction, props } from '@ngrx/store';\r\n \r\n export const addProductToCart = createAction(\r\n     '[Cart] Add to Cart',\r\n-    props<{ product: { name: string, price: number } }>());\r\n+    props<{ product: { name: string, price: number, quantity: number } }>());\r\n export const removeProductFromCart = createAction(\r\n     '[Cart] Remove from Cart',\r\n-    props<{ product: { name: string, price: number } }>());\r\n+    props<{ product: { name: string, price: number, quantity: number } }>());\r\n"
+                },
+                {
+                    "date": 1691989898747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import { createAction, props } from '@ngrx/store';\r\n-\r\n+// actions.ts\r\n export const addProductToCart = createAction(\r\n-    '[Cart] Add to Cart',\r\n-    props<{ product: { name: string, price: number, quantity: number } }>());\r\n+    '[Product] Add to Cart',\r\n+    props<{ product: { name: string; price: number; }, quantity: number }>()\r\n+);\r\n export const removeProductFromCart = createAction(\r\n     '[Cart] Remove from Cart',\r\n-    props<{ product: { name: string, price: number, quantity: number } }>());\r\n+    props<{ product: { name: string, price: number } }>()\r\n+);\r\n"
+                },
+                {
+                    "date": 1692036735694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { createAction, props } from '@ngrx/store';\r\n+\r\n+export const addProductToCart = createAction(\r\n+    '[Product] Add to Cart',\r\n+    props<{ product: { name: string; price: number; }, quantity: number }>()\r\n+);\r\n+export const removeProductFromCart = createAction(\r\n+    '[Cart] Remove from Cart',\r\n+    props<{ product: { name: string, price: number } }>()\r\n+);\r\n"
+                },
+                {
+                    "date": 1692041559132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { createAction, props } from '@ngrx/store';\r\n+\r\n+export const addProductToCart = createAction(\r\n+    '[Cart] Add to Cart',\r\n+    props<{ product: { name: string; price: number; }, quantity: number }>()\r\n+);\r\n+export const removeProductFromCart = createAction(\r\n+    '[Cart] Remove from Cart',\r\n+    props<{ product: { name: string, price: number } }>()\r\n+);\r\n"
+                },
+                {
+                    "date": 1692041570253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { createAction, props } from '@ngrx/store';\r\n \r\n export const addProductToCart = createAction(\r\n-    '[Cart] Add to Cart',\r\n+    '[Product] Add to Cart',\r\n     props<{ product: { name: string; price: number; }, quantity: number }>()\r\n );\r\n export const removeProductFromCart = createAction(\r\n     '[Cart] Remove from Cart',\r\n"
+                }
+            ],
+            "date": 1691974778229,
+            "name": "Commit-0",
+            "content": "import { Store } from '@ngrx/store';\r\n\r\nexport const ADD_TO_CART = '[Cart] Add to Cart';\r\nexport const REMOVE_FROM_CART = '[Cart] Remove from Cart';\r\n"
+        }
+    ]
+}

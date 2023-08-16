@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/features/cart/components/cart/cart.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1691979483669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691988315416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <h2>Your Shopping Cart</h2>\n <ul>\n-  <li *ngFor=\"let item of cart$ | async\">{{ item.name }} - {{ item.price }}</li>\n+  <li *ngFor=\"let item of cart$ | async\">{{ item.name }} - ${{ item.price }}.00</li>\n </ul>\n <p>Total Price: {{ totalPrice$ | async }}</p>\n"
+                },
+                {
+                    "date": 1691988345139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n   <li *ngFor=\"let item of cart$ | async\">\n     {{ item.name }} - ${{ item.price }}.00\n   </li>\n </ul>\n-<p>Total Price: {{ totalPrice$ | async }}</p>\n+<p>Total Price: ${{ totalPrice$ | async }}.00</p>\n"
+                },
+                {
+                    "date": 1691990131647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <h2>Your Shopping Cart</h2>\n <ul>\n   <li *ngFor=\"let item of cart$ | async\">\n-    {{ item.name }} - ${{ item.price }}.00\n+    {{ item.name }} - ${{ item.price * item.quantity }}.00\n   </li>\n </ul>\n <p>Total Price: ${{ totalPrice$ | async }}.00</p>\n"
+                }
+            ],
+            "date": 1691979483669,
+            "name": "Commit-0",
+            "content": "<h2>Your Shopping Cart</h2>\n<ul>\n  <li *ngFor=\"let item of cart$ | async\">{{ item.name }} - {{ item.price }}</li>\n</ul>\n<p>Total Price: {{ totalPrice$ | async }}</p>\n"
+        }
+    ]
+}

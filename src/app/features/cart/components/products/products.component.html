@@ -1,0 +1,17 @@
+<div class="products">
+  <div class="product-card" *ngFor="let product of products">
+    <img [src]="product.imageUrl" alt="{{ product.name }}" />
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.price | currency }}</p>
+    <input
+      type="number"
+      [(ngModel)]="productQuantity[product.name]"
+      min="1"
+      max="100"
+      class="quantity-input"
+    />
+    <button (click)="onAddToCart(product, productQuantity[product.name] || 1)">
+      Add to Cart
+    </button>
+  </div>
+</div>

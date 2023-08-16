@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/features/cart/components/products/products.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1691979865586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691993260934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n     color: white;\r\n     padding: 10px 20px;\r\n     border: none;\r\n     cursor: pointer;\r\n+    margin-left: 10px;\r\n }\r\n \r\n button:hover {\r\n     background-color: #0056b3;\r\n"
+                },
+                {
+                    "date": 1691993367785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,4 +25,11 @@\n \r\n button:hover {\r\n     background-color: #0056b3;\r\n }\r\n+\r\n+.quantity-input {\r\n+    width: 60px;\r\n+    padding: 5px;\r\n+    border: 1px solid #ccc;\r\n+    border-radius: 5px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1691993461482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,8 @@\n }\r\n \r\n .quantity-input {\r\n     width: 60px;\r\n-    padding: 5px;\r\n+    padding: 8px;\r\n     border: 1px solid #ccc;\r\n     border-radius: 5px;\r\n }\r\n"
+                }
+            ],
+            "date": 1691979865586,
+            "name": "Commit-0",
+            "content": ".products {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.product-card {\r\n    border: 1px solid #ccc;\r\n    padding: 16px;\r\n    margin: 16px;\r\n    width: 200px;\r\n}\r\n\r\n.product-card img {\r\n    max-width: 100%;\r\n}\r\n\r\nbutton {\r\n    background-color: #007bff;\r\n    color: white;\r\n    padding: 10px 20px;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n\r\nbutton:hover {\r\n    background-color: #0056b3;\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/features/cart/selectors/selector.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1691977754548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691978074092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { createFeatureSelector, createSelector } from '@ngrx/store';\r\n-import { State } from './reducer';\r\n+import { State } from '../reducers/reducer';\r\n \r\n export const selectProductFeature = createFeatureSelector<State>('product');\r\n \r\n export const selectCart = createSelector(\r\n"
+                },
+                {
+                    "date": 1691978915729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import { createFeatureSelector, createSelector } from '@ngrx/store';\r\n-import { State } from '../reducers/reducer';\r\n+//import { State } from '../recucers/reducer';\r\n+import { State } from '../reducers/reducer'; // Updated path\r\n \r\n+\r\n export const selectProductFeature = createFeatureSelector<State>('product');\r\n \r\n export const selectCart = createSelector(\r\n     selectProductFeature,\r\n"
+                },
+                {
+                    "date": 1691980914726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,12 @@\n export const selectProductFeature = createFeatureSelector<State>('product');\r\n \r\n export const selectCart = createSelector(\r\n     selectProductFeature,\r\n-    (state: State) => state.cart\r\n+    (state: State) => {\r\n+        console.log('State inside selectCart:', state); // Debugging line\r\n+        return state ? state.cart : []; // Added a check for undefined state\r\n+    }\r\n );\r\n \r\n export const selectTotalPrice = createSelector(\r\n     selectCart,\r\n"
+                },
+                {
+                    "date": 1691991061529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,7 @@\n );\r\n \r\n export const selectTotalPrice = createSelector(\r\n     selectCart,\r\n-    (cart: { name: string, price: number }[]) => cart.reduce((total, product) => total + product.price, 0)\r\n+    (cart: { name: string, price: number, quantity: number }[]) => cart.reduce(\r\n+        (total, product) => total + product.price * product.quantity, 0)\r\n );\r\n"
+                },
+                {
+                    "date": 1691992607531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,12 @@\n import { createFeatureSelector, createSelector } from '@ngrx/store';\r\n-//import { State } from '../recucers/reducer';\r\n-import { State } from '../reducers/reducer'; // Updated path\r\n+import { State } from '../reducers/reducer';\r\n \r\n-\r\n export const selectProductFeature = createFeatureSelector<State>('product');\r\n \r\n export const selectCart = createSelector(\r\n     selectProductFeature,\r\n     (state: State) => {\r\n-        console.log('State inside selectCart:', state); // Debugging line\r\n         return state ? state.cart : []; // Added a check for undefined state\r\n     }\r\n );\r\n \r\n"
+                }
+            ],
+            "date": 1691977754548,
+            "name": "Commit-0",
+            "content": "import { createFeatureSelector, createSelector } from '@ngrx/store';\r\nimport { State } from './reducer';\r\n\r\nexport const selectProductFeature = createFeatureSelector<State>('product');\r\n\r\nexport const selectCart = createSelector(\r\n    selectProductFeature,\r\n    (state: State) => state.cart\r\n);\r\n\r\nexport const selectTotalPrice = createSelector(\r\n    selectCart,\r\n    (cart: { name: string, price: number }[]) => cart.reduce((total, product) => total + product.price, 0)\r\n);\r\n"
+        }
+    ]
+}

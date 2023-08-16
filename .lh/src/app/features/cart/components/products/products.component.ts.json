@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/app/features/cart/components/products/products.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1691979194329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691979865596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,15 +7,15 @@\n   styleUrls: ['./products.component.scss']\n })\n export class ProductsComponent {\n   products = [\n-    { name: 'Product 1', price: 100 },\n-    { name: 'Product 2', price: 200 },\n+    { name: 'Product 1', price: 100, imageUrl: 'image1.jpg' },\n+    { name: 'Product 2', price: 200, imageUrl: 'image2.jpg' },\n     // Add more products here\n   ];\n \n   constructor(private store: Store) { }\n \n-  onProductSelected(product: any) {\n+  onAddToCart(product: any) {\n     this.store.dispatch(ProductActions.addProductToCart({ product }));\n   }\n }\n"
+                },
+                {
+                    "date": 1691987929903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n   styleUrls: ['./products.component.scss']\n })\n export class ProductsComponent {\n   products = [\n-    { name: 'Product 1', price: 100, imageUrl: 'image1.jpg' },\n-    { name: 'Product 2', price: 200, imageUrl: 'image2.jpg' },\n+    { name: 'Apple', price: 100, imageUrl: 'image1.jpg' },\n+    { name: 'Orange', price: 200, imageUrl: 'image2.jpg' },\n     // Add more products here\n   ];\n \n   constructor(private store: Store) { }\n"
+                },
+                {
+                    "date": 1691988047812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n   styleUrls: ['./products.component.scss']\n })\n export class ProductsComponent {\n   products = [\n-    { name: 'Apple', price: 100, imageUrl: 'image1.jpg' },\n-    { name: 'Orange', price: 200, imageUrl: 'image2.jpg' },\n+    { name: 'Apple', price: 100, imageUrl: 'apple.jpg' },\n+    { name: 'Orange', price: 200, imageUrl: 'orange.jfif' },\n     // Add more products here\n   ];\n \n   constructor(private store: Store) { }\n"
+                },
+                {
+                    "date": 1691988144612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   styleUrls: ['./products.component.scss']\n })\n export class ProductsComponent {\n   products = [\n-    { name: 'Apple', price: 100, imageUrl: 'apple.jpg' },\n+    { name: 'Apple', price: 100, imageUrl: '../../assets/apple.jpg' },\n     { name: 'Orange', price: 200, imageUrl: 'orange.jfif' },\n     // Add more products here\n   ];\n \n"
+                },
+                {
+                    "date": 1691988183539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n })\n export class ProductsComponent {\n   products = [\n     { name: 'Apple', price: 100, imageUrl: '../../assets/apple.jpg' },\n-    { name: 'Orange', price: 200, imageUrl: 'orange.jfif' },\n+    { name: 'Orange', price: 200, imageUrl: '../../assets/orange.jfif' },\n     // Add more products here\n   ];\n \n   constructor(private store: Store) { }\n"
+                },
+                {
+                    "date": 1691988216021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n   styleUrls: ['./products.component.scss']\n })\n export class ProductsComponent {\n   products = [\n-    { name: 'Apple', price: 100, imageUrl: '../../assets/apple.jpg' },\n-    { name: 'Orange', price: 200, imageUrl: '../../assets/orange.jfif' },\n+    { name: 'Apple', price: 1, imageUrl: '../../assets/apple.jpg' },\n+    { name: 'Orange', price: 2, imageUrl: '../../assets/orange.jfif' },\n     // Add more products here\n   ];\n \n   constructor(private store: Store) { }\n"
+                },
+                {
+                    "date": 1691989214927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,16 @@\n \n   constructor(private store: Store) { }\n \n   onAddToCart(product: any) {\n-    this.store.dispatch(ProductActions.addProductToCart({ product }));\n+    // Default to 1 if no quantity is specified\n+    const quantity = product.quantity || 1;\n+\n+    // Repeat the dispatch action for the specified quantity\n+    for (let i = 0; i < quantity; i++) {\n+      this.store.dispatch(ProductActions.addProductToCart({ product }));\n+    }\n+\n+    // Optionally reset the quantity input field\n+    product.quantity = 1;\n   }\n }\n"
+                },
+                {
+                    "date": 1691989267140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n   styleUrls: ['./products.component.scss']\n })\n export class ProductsComponent {\n   products = [\n-    { name: 'Apple', price: 1, imageUrl: '../../assets/apple.jpg' },\n-    { name: 'Orange', price: 2, imageUrl: '../../assets/orange.jfif' },\n+    { name: 'Apple', price: 1, imageUrl: '../../assets/apple.jpg', quantity: 1 },\n+    { name: 'Orange', price: 2, imageUrl: '../../assets/orange.jfif', quantity: 1 },\n     // Add more products here\n   ];\n \n   constructor(private store: Store) { }\n"
+                },
+                {
+                    "date": 1691989898809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,20 +11,13 @@\n     { name: 'Apple', price: 1, imageUrl: '../../assets/apple.jpg', quantity: 1 },\n     { name: 'Orange', price: 2, imageUrl: '../../assets/orange.jfif', quantity: 1 },\n     // Add more products here\n   ];\n-\n+  productQuantity: { [key: string]: number } = {};\n   constructor(private store: Store) { }\n \n-  onAddToCart(product: any) {\n-    // Default to 1 if no quantity is specified\n-    const quantity = product.quantity || 1;\n-\n-    // Repeat the dispatch action for the specified quantity\n-    for (let i = 0; i < quantity; i++) {\n-      this.store.dispatch(ProductActions.addProductToCart({ product }));\n-    }\n-\n+  onAddToCart(product: any, quantity: number) {\n+    this.store.dispatch(ProductActions.addProductToCart({ product, quantity }));\n     // Optionally reset the quantity input field\n     product.quantity = 1;\n   }\n }\n"
+                },
+                {
+                    "date": 1691989991877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n \n   onAddToCart(product: any, quantity: number) {\n     this.store.dispatch(ProductActions.addProductToCart({ product, quantity }));\n     // Optionally reset the quantity input field\n-    product.quantity = 1;\n+    //product.quantity = 1;\n   }\n }\n"
+                },
+                {
+                    "date": 1691990034123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n   styleUrls: ['./products.component.scss']\n })\n export class ProductsComponent {\n   products = [\n-    { name: 'Apple', price: 1, imageUrl: '../../assets/apple.jpg', quantity: 1 },\n-    { name: 'Orange', price: 2, imageUrl: '../../assets/orange.jfif', quantity: 1 },\n+    { name: 'Apple', price: 1, imageUrl: '../../assets/apple.jpg' },\n+    { name: 'Orange', price: 2, imageUrl: '../../assets/orange.jfif'},\n     // Add more products here\n   ];\n   productQuantity: { [key: string]: number } = {};\n   constructor(private store: Store) { }\n"
+                },
+                {
+                    "date": 1691992607520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,15 +9,12 @@\n export class ProductsComponent {\n   products = [\n     { name: 'Apple', price: 1, imageUrl: '../../assets/apple.jpg' },\n     { name: 'Orange', price: 2, imageUrl: '../../assets/orange.jfif' },\n-    // Add more products here\n   ];\n   productQuantity: { [key: string]: number } = {};\n   constructor(private store: Store) { }\n \n   onAddToCart(product: any, quantity: number) {\n     this.store.dispatch(ProductActions.addProductToCart({ product, quantity }));\n-    // Optionally reset the quantity input field\n-    //product.quantity = 1;\n   }\n }\n"
+                }
+            ],
+            "date": 1691979194329,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\nimport { Store } from '@ngrx/store';\nimport * as ProductActions from '../../actions/actions';\n@Component({\n  selector: 'app-products',\n  templateUrl: './products.component.html',\n  styleUrls: ['./products.component.scss']\n})\nexport class ProductsComponent {\n  products = [\n    { name: 'Product 1', price: 100 },\n    { name: 'Product 2', price: 200 },\n    // Add more products here\n  ];\n\n  constructor(private store: Store) { }\n\n  onProductSelected(product: any) {\n    this.store.dispatch(ProductActions.addProductToCart({ product }));\n  }\n}\n"
+        }
+    ]
+}

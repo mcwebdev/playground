@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1691708024287,
@@ -36,6 +36,14 @@
                 {
                     "date": 1691723555438,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-<h2>NGRX store with Google Cloud Firestore</p>\n+<h2>NGRX store with Google Cloud Firestore</h2>\n <app-counter></app-counter>\n"
+                },
+                {
+                    "date": 1691979483676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n <h2>NGRX store with Google Cloud Firestore</h2>\n <app-counter></app-counter>\n+<app-products-list></app-products-list>\n+<app-shopping-cart></app-shopping-cart>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1691979609327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n <h2>NGRX store with Google Cloud Firestore</h2>\n <app-counter></app-counter>\n-<app-products-list></app-products-list>\n-<app-shopping-cart></app-shopping-cart>\n+<app-products></app-products>\n+<app-cart></app-cart>\n"
                 }
             ],
             "date": 1691708024287,

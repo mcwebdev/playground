@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/features/cart/components/cart/cart.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1691979483687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692038046175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { Component } from '@angular/core';\n+import { Store } from '@ngrx/store';\n+import * as fromProduct from '../../selectors/selector';\n+import * as ProductActions from '../../actions/actions';\n+@Component({\n+  selector: 'app-cart',\n+  templateUrl: './cart.component.html',\n+  styleUrls: ['./cart.component.scss']\n+})\n+export class CartComponent {\n+  cart$ = this.store.select(fromProduct.selectCart);\n+  totalPrice$ = this.store.select(fromProduct.selectTotalPrice);\n+\n+  constructor(private store: Store) { }\n+  onRemoveFromCart(product: any) {\n+    this.store.dispatch(ProductActions.removeProductFromCart({ product }));\n+  }\n+}\n"
+                }
+            ],
+            "date": 1691979483687,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\nimport { Store } from '@ngrx/store';\nimport * as fromProduct from '../../selectors/selector';\n\n@Component({\n  selector: 'app-cart',\n  templateUrl: './cart.component.html',\n  styleUrls: ['./cart.component.scss']\n})\nexport class CartComponent {\n  cart$ = this.store.select(fromProduct.selectCart);\n  totalPrice$ = this.store.select(fromProduct.selectTotalPrice);\n\n  constructor(private store: Store) { }\n}\n"
+        }
+    ]
+}

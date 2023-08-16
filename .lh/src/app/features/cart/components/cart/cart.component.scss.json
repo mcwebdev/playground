@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/features/cart/components/cart/cart.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1692038247186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692038276830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,8 @@\n \r\n button:hover {\r\n     background-color: #0056b3;\r\n }\r\n+li {\r\n+    list-style-type: none;\r\n+    margin-bottom: 10px;\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1692038247186,
+            "name": "Commit-0",
+            "content": "button {\r\n    background-color: #007bff;\r\n    color: white;\r\n    padding: 10px 20px;\r\n    border: none;\r\n    cursor: pointer;\r\n    margin-left: 10px;\r\n}\r\n\r\nbutton:hover {\r\n    background-color: #0056b3;\r\n}\r\n"
+        }
+    ]
+}

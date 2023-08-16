@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/features/cart/reducers/recucer.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1691975687613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691977754554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,22 @@\n import { createReducer, on } from \"@ngrx/store\";\r\n import * as productActions from '../actions/actions';\r\n \r\n-export interface State { productName: string, price: number };\r\n+export interface State {\r\n+    cart: { name: string, price: number }[];\r\n+}\r\n+\r\n+export const initialState: State = {\r\n+    cart: [],\r\n+};\r\n+\r\n+const _productReducer = createReducer(\r\n+    initialState,\r\n+    on(productActions.addProductToCart, (state, { product }) => ({\r\n+        ...state,\r\n+        cart: [...state.cart, product],\r\n+    })),\r\n+    on(productActions.removeProductFromCart, (state, { product }) => ({\r\n+        ...state,\r\n+        cart: state.cart.filter(item => item !== product),\r\n+    }))\r\n+);\r\n"
+                }
+            ],
+            "date": 1691975687613,
+            "name": "Commit-0",
+            "content": "import { createReducer, on } from \"@ngrx/store\";\r\nimport * as productActions from '../actions/actions';\r\n\r\nexport interface State { productName: string, price: number };\r\n"
+        }
+    ]
+}

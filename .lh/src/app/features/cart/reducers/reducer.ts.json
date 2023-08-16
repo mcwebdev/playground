@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/app/features/cart/reducers/reducer.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1691978915737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1691980372677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,8 @@\n         cart: state.cart.filter(item => item !== product),\r\n     }))\r\n );\r\n export function productReducer(state: any, action: any) {\r\n+    console.log('Reducer state:', state); // Debugging line\r\n+    console.log('Reducer action:', action); // Debugging line\r\n     return _productReducer(state, action);\r\n }\r\n"
+                },
+                {
+                    "date": 1691989214959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { createReducer, on } from \"@ngrx/store\";\r\n import * as productActions from '../actions/actions';\r\n \r\n export interface State {\r\n-    cart: { name: string, price: number }[];\r\n+    cart: { name: string, price: number, quantity: number }[];\r\n }\r\n \r\n export const initialState: State = {\r\n     cart: [],\r\n"
+                },
+                {
+                    "date": 1691989898746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+import { createReducer, on } from \"@ngrx/store\";\r\n+import * as productActions from '../actions/actions';\r\n+\r\n+export interface State {\r\n+    cart: { name: string, price: number, quantity: number }[];\r\n+}\r\n+\r\n+export const initialState: State = {\r\n+    cart: [],\r\n+};\r\n+\r\n+const _productReducer = createReducer(\r\n+    initialState,\r\n+    on(productActions.addProductToCart, (state, { product, quantity }) => ({\r\n+        ...state,\r\n+        cart: [...state.cart, { ...product, quantity: quantity }],\r\n+    })),\r\n+    on(productActions.removeProductFromCart, (state, { product }) => ({\r\n+        ...state,\r\n+        cart: state.cart.filter(item => item !== product),\r\n+    }))\r\n+);\r\n+export function productReducer(state: any, action: any) {\r\n+    console.log('Reducer state:', state); // Debugging line\r\n+    console.log('Reducer action:', action); // Debugging line\r\n+    return _productReducer(state, action);\r\n+}\r\n"
+                },
+                {
+                    "date": 1691990963135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,32 @@\n };\r\n \r\n const _productReducer = createReducer(\r\n     initialState,\r\n-    on(productActions.addProductToCart, (state, { product, quantity }) => ({\r\n-        ...state,\r\n-        cart: [...state.cart, { ...product, quantity: quantity }],\r\n-    })),\r\n+    on(productActions.addProductToCart, (state, { product, quantity }) => {\r\n+        const existingProductIndex = state.cart.findIndex(p => p.name === product.name);\r\n+        if (existingProductIndex !== -1) {\r\n+            // Update the existing product's quantity\r\n+            const updatedProduct = {\r\n+                ...state.cart[existingProductIndex],\r\n+                quantity: state.cart[existingProductIndex].quantity + quantity\r\n+            };\r\n+            return {\r\n+                ...state,\r\n+                cart: [\r\n+                    ...state.cart.slice(0, existingProductIndex),\r\n+                    updatedProduct,\r\n+                    ...state.cart.slice(existingProductIndex + 1),\r\n+                ],\r\n+            };\r\n+        } else {\r\n+            // Add a new entry\r\n+            return {\r\n+                ...state,\r\n+                cart: [...state.cart, { ...product, quantity }],\r\n+            };\r\n+        }\r\n+    }),\r\n     on(productActions.removeProductFromCart, (state, { product }) => ({\r\n         ...state,\r\n         cart: state.cart.filter(item => item !== product),\r\n     }))\r\n"
+                },
+                {
+                    "date": 1691991653335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n     initialState,\r\n     on(productActions.addProductToCart, (state, { product, quantity }) => {\r\n         const existingProductIndex = state.cart.findIndex(p => p.name === product.name);\r\n         if (existingProductIndex !== -1) {\r\n+            console.log('existingProductIndex:', state); // Debugging line\r\n             // Update the existing product's quantity\r\n             const updatedProduct = {\r\n                 ...state.cart[existingProductIndex],\r\n                 quantity: state.cart[existingProductIndex].quantity + quantity\r\n"
+                },
+                {
+                    "date": 1691992607530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,9 @@\n     initialState,\r\n     on(productActions.addProductToCart, (state, { product, quantity }) => {\r\n         const existingProductIndex = state.cart.findIndex(p => p.name === product.name);\r\n         if (existingProductIndex !== -1) {\r\n-            console.log('existingProductIndex:', state); // Debugging line\r\n-            // Update the existing product's quantity\r\n+            // Update the quantity\r\n             const updatedProduct = {\r\n                 ...state.cart[existingProductIndex],\r\n                 quantity: state.cart[existingProductIndex].quantity + quantity\r\n             };\r\n@@ -41,8 +40,6 @@\n         cart: state.cart.filter(item => item !== product),\r\n     }))\r\n );\r\n export function productReducer(state: any, action: any) {\r\n-    console.log('Reducer state:', state); // Debugging line\r\n-    console.log('Reducer action:', action); // Debugging line\r\n     return _productReducer(state, action);\r\n }\r\n"
+                }
+            ],
+            "date": 1691978915737,
+            "name": "Commit-0",
+            "content": "import { createReducer, on } from \"@ngrx/store\";\r\nimport * as productActions from '../actions/actions';\r\n\r\nexport interface State {\r\n    cart: { name: string, price: number }[];\r\n}\r\n\r\nexport const initialState: State = {\r\n    cart: [],\r\n};\r\n\r\nconst _productReducer = createReducer(\r\n    initialState,\r\n    on(productActions.addProductToCart, (state, { product }) => ({\r\n        ...state,\r\n        cart: [...state.cart, product],\r\n    })),\r\n    on(productActions.removeProductFromCart, (state, { product }) => ({\r\n        ...state,\r\n        cart: state.cart.filter(item => item !== product),\r\n    }))\r\n);\r\nexport function productReducer(state: any, action: any) {\r\n    return _productReducer(state, action);\r\n}\r\n"
+        }
+    ]
+}
