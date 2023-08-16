@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/app/pages/dashboards/change-detection-dashboard/child/child.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1692210161142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692210634035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n \n @Component({\n   selector: 'app-child',\n   templateUrl: './child.component.html',\n-  styleUrls: ['./child.component.scss']\n+  styleUrls: ['./child.component.scss'],\n+  changeDetection: ChangeDetectionStrategy.OnPush,\n })\n export class ChildComponent {\n   @Input() message: any;\n }\n"
+                },
+                {
+                    "date": 1692212193162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,13 @@\n @Component({\n   selector: 'app-child',\n   templateUrl: './child.component.html',\n   styleUrls: ['./child.component.scss'],\n+  //OnPush Change Detection Strategy:\n+  //With the OnPush strategy, Angular only checks for changes if the component's \n+  //input properties (@Input) change, or if an event bound with @Output emits an event. \n+  //This can lead to significant performance improvements, especially in applications \n+  //with complex component trees or heavy rendering.\n   changeDetection: ChangeDetectionStrategy.OnPush,\n })\n export class ChildComponent {\n   @Input() message: any;\n"
+                },
+                {
+                    "date": 1692212206519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n @Component({\n   selector: 'app-child',\n   templateUrl: './child.component.html',\n   styleUrls: ['./child.component.scss'],\n-  //OnPush Change Detection Strategy:\n-  //With the OnPush strategy, Angular only checks for changes if the component's \n-  //input properties (@Input) change, or if an event bound with @Output emits an event. \n-  //This can lead to significant performance improvements, especially in applications \n-  //with complex component trees or heavy rendering.\n+  //  OnPush Change Detection Strategy:\n+  //  With the OnPush strategy, Angular only checks for changes if the component's \n+  //  input properties (@Input) change, or if an event bound with @Output emits an event. \n+  //  This can lead to significant performance improvements, especially in applications \n+  //  with complex component trees or heavy rendering.\n   changeDetection: ChangeDetectionStrategy.OnPush,\n })\n export class ChildComponent {\n   @Input() message: any;\n"
+                },
+                {
+                    "date": 1692212274440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,8 @@\n @Component({\n   selector: 'app-child',\n   templateUrl: './child.component.html',\n   styleUrls: ['./child.component.scss'],\n-  //  OnPush Change Detection Strategy:\n-  //  With the OnPush strategy, Angular only checks for changes if the component's \n-  //  input properties (@Input) change, or if an event bound with @Output emits an event. \n-  //  This can lead to significant performance improvements, especially in applications \n-  //  with complex component trees or heavy rendering.\n   changeDetection: ChangeDetectionStrategy.OnPush,\n })\n export class ChildComponent {\n   @Input() message: any;\n"
+                },
+                {
+                    "date": 1692212316886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,13 @@\n @Component({\n   selector: 'app-child',\n   templateUrl: './child.component.html',\n   styleUrls: ['./child.component.scss'],\n+  //  OnPush Change Detection Strategy:\n+  //  With the OnPush strategy, Angular only checks for changes if the component's \n+  //  input properties (@Input) change, or if an event bound with @Output emits an event. \n+  //  This can lead to significant performance improvements, especially in applications \n+  //  with complex component trees or heavy rendering.\n   changeDetection: ChangeDetectionStrategy.OnPush,\n })\n export class ChildComponent {\n   @Input() message: any;\n"
+                },
+                {
+                    "date": 1692218169160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,7 @@\n   //  with complex component trees or heavy rendering.\n   changeDetection: ChangeDetectionStrategy.OnPush,\n })\n export class ChildComponent {\n+  switchStatus: boolean = true;\n   @Input() message: any;\n }\n"
+                },
+                {
+                    "date": 1692218305812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Component, Input, ChangeDetectionStrategy } from '@angular/core';\n-\n+import { HighlightJsDirective } from 'ngx-highlight-js';\n @Component({\n   selector: 'app-child',\n   templateUrl: './child.component.html',\n   styleUrls: ['./child.component.scss'],\n@@ -9,8 +9,9 @@\n   //  input properties (@Input) change, or if an event bound with @Output emits an event. \n   //  This can lead to significant performance improvements, especially in applications \n   //  with complex component trees or heavy rendering.\n   changeDetection: ChangeDetectionStrategy.OnPush,\n+  imports: [HighlightJsDirective],\n })\n export class ChildComponent {\n   switchStatus: boolean = true;\n   @Input() message: any;\n"
+                },
+                {
+                    "date": 1692218327908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Component, Input, ChangeDetectionStrategy } from '@angular/core';\n-import { HighlightJsDirective } from 'ngx-highlight-js';\n+\n @Component({\n   selector: 'app-child',\n   templateUrl: './child.component.html',\n   styleUrls: ['./child.component.scss'],\n@@ -9,9 +9,8 @@\n   //  input properties (@Input) change, or if an event bound with @Output emits an event. \n   //  This can lead to significant performance improvements, especially in applications \n   //  with complex component trees or heavy rendering.\n   changeDetection: ChangeDetectionStrategy.OnPush,\n-  imports: [HighlightJsDirective],\n })\n export class ChildComponent {\n   switchStatus: boolean = true;\n   @Input() message: any;\n"
+                },
+                {
+                    "date": 1692219426044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,7 @@\n   //  with complex component trees or heavy rendering.\n   changeDetection: ChangeDetectionStrategy.OnPush,\n })\n export class ChildComponent {\n-  switchStatus: boolean = true;\n+\n   @Input() message: any;\n }\n"
+                },
+                {
+                    "date": 1692219911155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';\n+import { HighlightLoader } from 'ngx-highlightjs';\n+@Component({\n+  selector: 'app-child',\n+  templateUrl: './child.component.html',\n+  styleUrls: ['./child.component.scss'],\n+  //  OnPush Change Detection Strategy:\n+  //  With the OnPush strategy, Angular only checks for changes if the component's \n+  //  input properties (@Input) change, or if an event bound with @Output emits an event. \n+  //  This can lead to significant performance improvements, especially in applications \n+  //  with complex component trees or heavy rendering.\n+  changeDetection: ChangeDetectionStrategy.OnPush,\n+})\n+export class ChildComponent {\n+\n+  constructor(private hljsLoader: HighlightLoader) { }\n+  @Input() message: any;\n+\n+}\n"
+                },
+                {
+                    "date": 1692220065676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import { Component, Input, ChangeDetectionStrategy } from '@angular/core';\n-import { HighlightLoader } from 'ngx-highlightjs';\n @Component({\n   selector: 'app-child',\n   templateUrl: './child.component.html',\n   styleUrls: ['./child.component.scss'],\n@@ -12,8 +11,8 @@\n   changeDetection: ChangeDetectionStrategy.OnPush,\n })\n export class ChildComponent {\n \n-  constructor(private hljsLoader: HighlightLoader) { }\n+  constructor() { }\n   @Input() message: any;\n \n }\n"
+                }
+            ],
+            "date": 1692210161142,
+            "name": "Commit-0",
+            "content": "import { Component, Input, ChangeDetectionStrategy } from '@angular/core';\n\n@Component({\n  selector: 'app-child',\n  templateUrl: './child.component.html',\n  styleUrls: ['./child.component.scss']\n})\nexport class ChildComponent {\n  @Input() message: any;\n}\n"
+        }
+    ]
+}

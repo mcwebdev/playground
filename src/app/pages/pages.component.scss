@@ -1,0 +1,16 @@
+nav {
+    height: 45px;
+    a {
+        padding: 5px 10px;
+        background-color: #0056b3;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+    :hover {
+        background-color: #003366;
+    }
+}

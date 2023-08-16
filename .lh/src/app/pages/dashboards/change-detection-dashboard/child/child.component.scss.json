@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/app/pages/dashboards/change-detection-dashboard/child/child.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1692214078454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692217252443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+.message {\r\n+    color: #fff;\r\n+    background-color: #007bff;\r\n+    padding: 10px;\r\n+    border-radius: 5px;\r\n+    margin-bottom: 10px;\r\n+}\r\n+\r\n+textarea {\r\n+    width: 700px;\r\n+    padding: 10px;\r\n+    border-radius: 5px;\r\n+    border: solid 1px #ccc;\r\n+    margin-bottom: 10px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1692217263284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n }\r\n \r\n textarea {\r\n     width: 700px;\r\n+    height: 400px;\r\n     padding: 10px;\r\n     border-radius: 5px;\r\n     border: solid 1px #ccc;\r\n     margin-bottom: 10px;\r\n"
+                },
+                {
+                    "date": 1692217270010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n textarea {\r\n     width: 700px;\r\n-    height: 400px;\r\n+    height: 300px;\r\n     padding: 10px;\r\n     border-radius: 5px;\r\n     border: solid 1px #ccc;\r\n     margin-bottom: 10px;\r\n"
+                },
+                {
+                    "date": 1692217549470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+.message {\r\n+    color: #fff;\r\n+    background-color: #007bff;\r\n+    padding: 10px;\r\n+    border-radius: 5px;\r\n+    margin-bottom: 10px;\r\n+}\r\n+\r\n+textarea {\r\n+    width: 700px;\r\n+    height: 320px;\r\n+    padding: 10px;\r\n+    border-radius: 5px;\r\n+    border: solid 1px #ccc;\r\n+    margin-bottom: 10px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1692217564747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n textarea {\r\n     width: 700px;\r\n-    height: 320px;\r\n+    height: 380px;\r\n     padding: 10px;\r\n     border-radius: 5px;\r\n     border: solid 1px #ccc;\r\n     margin-bottom: 10px;\r\n"
+                },
+                {
+                    "date": 1692217616617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     margin-bottom: 10px;\r\n }\r\n \r\n textarea {\r\n-    width: 700px;\r\n+    width: 800px;\r\n     height: 380px;\r\n     padding: 10px;\r\n     border-radius: 5px;\r\n     border: solid 1px #ccc;\r\n"
+                },
+                {
+                    "date": 1692217653100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n textarea {\r\n     width: 800px;\r\n-    height: 380px;\r\n+    height: 420px;\r\n     padding: 10px;\r\n     border-radius: 5px;\r\n     border: solid 1px #ccc;\r\n     margin-bottom: 10px;\r\n"
+                }
+            ],
+            "date": 1692214078454,
+            "name": "Commit-0",
+            "content": ".message {\r\n    color: #fff;\r\n    background-color: #007bff;\r\n    padding: 10px;\r\n    border-radius: 5px;\r\n    margin-bottom: 10px;\r\n}\r\n"
+        }
+    ]
+}

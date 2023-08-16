@@ -1,0 +1,84 @@
+<p class="message">{{ message.text }}, {{ message.timestamp }}</p>
+
+<textarea highlight-js mode="default">
+  <p>
+    The bare minimum for using highlight.js on a web page is linking to the library along with one of the styles and calling
+    <a href="http://highlightjs.readthedocs.io/en/latest/api.html#inithighlightingonload"><code>initHighlightingOnLoad</code></a
+    >:
+  </p>
+  <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/styles/default.css&quot;&gt;
+  &lt;script src=&quot;/path/to/highlight.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+  </code></pre>
+  <p>
+    This will find and highlight code inside of <code>&lt;pre&gt;&lt;code&gt;</code> tags; it tries to detect the language automatically. If
+    automatic detection doesn’t work for you, you can specify the language in the <code>class</code> attribute:
+  </p>
+  <pre><code class="language-html">&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+  </code></pre>
+</textarea>
+<textarea readonly>
+    // When using changeDetection: ChangeDetectionStrategy.OnPush, the component will only be
+    // updated when the input reference changes. You can not update the input object and expect
+    // the component to be updated. You need to create a new object and assign it to the input
+    // property. This is because the OnPush strategy will only check for reference changes, not
+    // property changes.
+    
+    // if you were to setup breakpoints on the code below, you would observe 
+    // => this.message.text = 'Updated message'; 
+    // however you will not see it render in the view because you did not update the object reference.
+    // You only updated the object properties. ChangeDetectionStrategy.OnPush requires you update the
+    // object reference.
+
+    // incorrect
+    // updateMessage() {
+    //      this.message.text = 'Updated message';
+    //      this.message.timestamp = new Date();
+    // }
+    
+
+    //correct
+    updateMessage() {
+    this.message = {
+        //...this.message, use the ... operator to copy the properties of the old object
+        text: 'Updated message',
+        timestamp: new Date(),
+    };
+    }
+</textarea>
+<p>
+    In Angular, ChangeDetectionStrategy is a concept that determines how and when
+    Angular checks for changes in component data and updates the view accordingly.
+    There are two main change detection strategies: Default and OnPush.
+</p>
+
+<h3>Default Change Detection Strategy:</h3>
+<p>
+    This is the default behavior of Angular's change detection. In this strategy,
+    Angular automatically checks for changes in component data during various
+    events like user interactions, HTTP requests, timers, etc. Any change in the
+    component's data will trigger a re-evaluation of the template and update the
+    view accordingly.
+</p>
+
+<h3>OnPush Change Detection Strategy:</h3>
+<p>
+    With the OnPush strategy, Angular only checks for changes if the component's
+    input properties (@Input) change, or if an event bound with @Output emits an
+    event. This can lead to significant performance improvements, especially in
+    applications with complex component trees or heavy rendering.
+</p>
+
+<p>
+    Using the <strong>OnPush</strong> strategy requires careful management of
+    component state to ensure that changes are propagated correctly. It's
+    effective when the component's data doesn't change frequently and can lead to
+    better performance due to fewer change detection checks.
+</p>
+
+<p>
+    In addition to these strategies, you can also create custom change detection
+    strategies if needed. The choice of strategy depends on the specific
+    requirements of your application and the nature of your components' data and
+    interactions.
+</p>

@@ -3,11 +3,59 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1691723583682,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692212920301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,88 @@\n-/* You can add global styles to this file, and also import other style files */\n+/* CSS Reset */\n+body,\n+h1,\n\\ No newline at end of file\n+h2,\n+h3,\n+h4,\n+h5,\n+h6,\n+p,\n+blockquote,\n+pre,\n+a,\n+abbr,\n+acronym,\n+address,\n+big,\n+cite,\n+code,\n+del,\n+dfn,\n+em,\n+img,\n+ins,\n+kbd,\n+q,\n+s,\n+samp,\n+small,\n+strike,\n+strong,\n+sub,\n+sup,\n+tt,\n+var,\n+b,\n+u,\n+i,\n+center,\n+dl,\n+dt,\n+dd,\n+ol,\n+ul,\n+li,\n+fieldset,\n+form,\n+label,\n+legend,\n+table,\n+caption,\n+tbody,\n+tfoot,\n+thead,\n+tr,\n+th,\n+td {\n+    margin: 0;\n+    padding: 0;\n+    border: 0;\n+    outline: 0;\n+    font-size: 100%;\n+    vertical-align: baseline;\n+    background: transparent;\n+}\n+\n body {\n-  font-family: 'Roboto', sans-serif;\n-}\n+    line-height: 1;\n+}\n+\n+ol,\n+ul {\n+    list-style: none;\n+}\n+\n+blockquote,\n+q {\n+    quotes: none;\n+}\n+\n+blockquote:before,\n+blockquote:after,\n+q:before,\n+q:after {\n+    content: '';\n+    content: none;\n+}\n+\n+/* Remember to define focus styles and other styles for your specific project needs */\n"
+                },
+                {
+                    "date": 1692212944084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,8 +64,9 @@\n }\n \n body {\n     line-height: 1;\n+    font-family: Arial, Helvetica, sans-serif;\n }\n \n ol,\n ul {\n@@ -84,5 +85,5 @@\n     content: '';\n     content: none;\n }\n \n-/* Remember to define focus styles and other styles for your specific project needs */\n\\ No newline at end of file\n+/* Remember to define focus styles and other styles for your specific project needs */\n"
+                },
+                {
+                    "date": 1692212974930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,4 +86,7 @@\n     content: none;\n }\n \n /* Remember to define focus styles and other styles for your specific project needs */\n+app-pages {\n+    padding: 20px;\n+}\n"
+                },
+                {
+                    "date": 1692213015602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,5 +88,6 @@\n \n /* Remember to define focus styles and other styles for your specific project needs */\n app-pages {\n     padding: 20px;\n+    display: flex;\n }\n"
+                },
+                {
+                    "date": 1692213024158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,6 +88,6 @@\n \n /* Remember to define focus styles and other styles for your specific project needs */\n app-pages {\n     padding: 20px;\n-    display: flex;\n+    //display: flex;\n }\n"
+                },
+                {
+                    "date": 1692213045433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,6 +88,6 @@\n \n /* Remember to define focus styles and other styles for your specific project needs */\n app-pages {\n     padding: 20px;\n-    //display: flex;\n+    display: block;\n }\n"
+                },
+                {
+                    "date": 1692213140980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,4 +90,12 @@\n app-pages {\n     padding: 20px;\n     display: block;\n }\n+button {padding: 5px 10px;\n+    background-color: #0056b3;\n+    color: white;\n+    text-decoration: none;\n+    border-radius: 5px;\n+    margin-right: 5px;\n+    display: inline-block;\n+}\n"
+                },
+                {
+                    "date": 1692213151795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,11 @@\n app-pages {\n     padding: 20px;\n     display: block;\n }\n-button {padding: 5px 10px;\n+\n+button {\n+    padding: 5px 10px;\n     background-color: #0056b3;\n     color: white;\n     text-decoration: none;\n     border-radius: 5px;\n"
+                },
+                {
+                    "date": 1692213167815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,5 +99,6 @@\n     text-decoration: none;\n     border-radius: 5px;\n     margin-right: 5px;\n     display: inline-block;\n+    border:solid 1px #0056b3;\n }\n"
+                },
+                {
+                    "date": 1692213571710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,8 +86,9 @@\n     content: none;\n }\n \n /* Remember to define focus styles and other styles for your specific project needs */\n+\n app-pages {\n     padding: 20px;\n     display: block;\n }\n@@ -101,4 +102,7 @@\n     margin-right: 5px;\n     display: inline-block;\n     border:solid 1px #0056b3;\n }\n+p {\n+    padding: 10px 0;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1692213645981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,4 +106,7 @@\n \n p {\n     padding: 10px 0;\n }\n+h2{\n+    padding: 10px 0;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1692213688183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,8 @@\n     background-color: #0056b3;\n     color: white;\n     text-decoration: none;\n     border-radius: 5px;\n-    margin-right: 5px;\n     display: inline-block;\n     border: solid 1px #0056b3;\n }\n \n"
                 }
             ],
             "date": 1691723583682,

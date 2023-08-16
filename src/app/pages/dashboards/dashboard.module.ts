@@ -7,13 +7,24 @@ import { CounterComponent } from 'src/app/features/counter/components/counter.co
 import { ProductsComponent } from 'src/app/features/cart/components/products/products.component';
 import { CartComponent } from 'src/app/features/cart/components/cart/cart.component';
 import { FormsModule } from '@angular/forms';
+import { RxjsDashboardComponent } from './rxjs-dashboard/rxjs-dashboard.component';
+import { ChangeDetectionDashboardComponent } from './change-detection-dashboard/change-detection-dashboard.component';
+import { SignalsDashboardComponent } from './signals-dashboard/signals-dashboard.component';
+import { ChildComponent } from './change-detection-dashboard/child/child.component';
+import { IoDashboardComponent } from './io-dashboard/io-dashboard.component';
+
 @NgModule({
   declarations: [
     DashboardComponent,
     NgrxDashboardComponent,
     CounterComponent,
     ProductsComponent,
-    CartComponent
+    CartComponent,
+    RxjsDashboardComponent,
+    ChangeDetectionDashboardComponent,
+    SignalsDashboardComponent,
+    ChildComponent,
+    IoDashboardComponent
   ],
   imports: [
     FormsModule,

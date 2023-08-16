@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/main.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1692219102120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692219771784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,16 @@\n import { enableProdMode } from '@angular/core';\n import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n-import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\n+\n import { AppModule } from './app/app.module';\n+import {\n+  HighlightAutoResult,\n+  HighlightLoader,\n+  HighlightModule,\n+  HighlightOptions,\n+  HIGHLIGHT_OPTIONS,\n+} from 'ngx-highlightjs';\n \n-\n platformBrowserDynamic([\n   {\n     provide: HIGHLIGHT_OPTIONS,\n     useValue: {\n"
+                },
+                {
+                    "date": 1692220065703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,7 @@\n-import { enableProdMode } from '@angular/core';\n import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n \n import { AppModule } from './app/app.module';\n-import {\n-  HighlightAutoResult,\n-  HighlightLoader,\n-  HighlightModule,\n-  HighlightOptions,\n-  HIGHLIGHT_OPTIONS,\n-} from 'ngx-highlightjs';\n \n-platformBrowserDynamic([\n-  {\n-    provide: HIGHLIGHT_OPTIONS,\n-    useValue: {\n-      fullLibraryLoader: () => import('highlight.js'),\n-    },\n-  },\n-])\n-  .bootstrapModule(AppModule)\n-  .catch((err) => console.error(err));\n+\n+platformBrowserDynamic().bootstrapModule(AppModule)\n+  .catch(err => console.error(err));\n"
+                }
+            ],
+            "date": 1692219102120,
+            "name": "Commit-0",
+            "content": "import { enableProdMode } from '@angular/core';\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\nimport { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\nimport { AppModule } from './app/app.module';\n\n\nplatformBrowserDynamic([\n  {\n    provide: HIGHLIGHT_OPTIONS,\n    useValue: {\n      fullLibraryLoader: () => import('highlight.js'),\n    },\n  },\n])\n  .bootstrapModule(AppModule)\n  .catch((err) => console.error(err));\n"
+        }
+    ]
+}

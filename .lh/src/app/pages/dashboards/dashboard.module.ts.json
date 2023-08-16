@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1691712608741,
@@ -16,6 +16,22 @@
                 {
                     "date": 1691989429663,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import { NgrxDashboardComponent } from './ngrx-dashboard/ngrx-dashboard.component';\n import { CounterComponent } from 'src/app/features/counter/components/counter.component';\n import { ProductsComponent } from 'src/app/features/cart/components/products/products.component';\n import { CartComponent } from 'src/app/features/cart/components/cart/cart.component';\n+import { FormsModule } from '@angular/forms';\n @NgModule({\n   declarations: [\n     DashboardComponent,\n     NgrxDashboardComponent,\n@@ -14,8 +15,9 @@\n     ProductsComponent,\n     CartComponent\n   ],\n   imports: [\n+    FormsModule,\n     CommonModule,\n     DashboardRoutingModule\n   ]\n })\n"
+                },
+                {
+                    "date": 1692212316884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,15 +6,25 @@\n import { CounterComponent } from 'src/app/features/counter/components/counter.component';\n import { ProductsComponent } from 'src/app/features/cart/components/products/products.component';\n import { CartComponent } from 'src/app/features/cart/components/cart/cart.component';\n import { FormsModule } from '@angular/forms';\n+import { RxjsDashboardComponent } from './rxjs-dashboard/rxjs-dashboard.component';\n+import { ChangeDetectionDashboardComponent } from './change-detection-dashboard/change-detection-dashboard.component';\n+import { SignalsDashboardComponent } from './signals-dashboard/signals-dashboard.component';\n+import { ChildComponent } from './change-detection-dashboard/child/child.component';\n+import { IoDashboardComponent } from './io-dashboard/io-dashboard.component';\n @NgModule({\n   declarations: [\n     DashboardComponent,\n     NgrxDashboardComponent,\n     CounterComponent,\n     ProductsComponent,\n-    CartComponent\n+    CartComponent,\n+    RxjsDashboardComponent,\n+    ChangeDetectionDashboardComponent,\n+    SignalsDashboardComponent,\n+    ChildComponent,\n+    IoDashboardComponent\n   ],\n   imports: [\n     FormsModule,\n     CommonModule,\n"
+                },
+                {
+                    "date": 1692218119661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n import { ChangeDetectionDashboardComponent } from './change-detection-dashboard/change-detection-dashboard.component';\n import { SignalsDashboardComponent } from './signals-dashboard/signals-dashboard.component';\n import { ChildComponent } from './change-detection-dashboard/child/child.component';\n import { IoDashboardComponent } from './io-dashboard/io-dashboard.component';\n+import { HighlightJsModule } from 'ngx-highlight-js';\n+\n @NgModule({\n   declarations: [\n     DashboardComponent,\n     NgrxDashboardComponent,\n@@ -27,8 +29,9 @@\n   ],\n   imports: [\n     FormsModule,\n     CommonModule,\n+    HighlightJsModule,\n     DashboardRoutingModule\n   ]\n })\n export class DashboardModule { }\n"
+                },
+                {
+                    "date": 1692218528239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n import { ChangeDetectionDashboardComponent } from './change-detection-dashboard/change-detection-dashboard.component';\n import { SignalsDashboardComponent } from './signals-dashboard/signals-dashboard.component';\n import { ChildComponent } from './change-detection-dashboard/child/child.component';\n import { IoDashboardComponent } from './io-dashboard/io-dashboard.component';\n-import { HighlightJsModule } from 'ngx-highlight-js';\n+import { HighlightJsModule, HighlightJsConfig, HIGHLIGHTJS_CONFIG } from 'ngx-highlight-js';\n \n @NgModule({\n   declarations: [\n     DashboardComponent,\n@@ -31,7 +31,15 @@\n     FormsModule,\n     CommonModule,\n     HighlightJsModule,\n     DashboardRoutingModule\n+  ],\n+  providers: [\n+    {\n+      provide: HIGHLIGHTJS_CONFIG,\n+      useValue: {\n+        lang: 'html'\n+      } as HighlightJsConfig\n+    }\n   ]\n })\n export class DashboardModule { }\n"
+                },
+                {
+                    "date": 1692218839565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n import { ChangeDetectionDashboardComponent } from './change-detection-dashboard/change-detection-dashboard.component';\n import { SignalsDashboardComponent } from './signals-dashboard/signals-dashboard.component';\n import { ChildComponent } from './change-detection-dashboard/child/child.component';\n import { IoDashboardComponent } from './io-dashboard/io-dashboard.component';\n-import { HighlightJsModule, HighlightJsConfig, HIGHLIGHTJS_CONFIG } from 'ngx-highlight-js';\n \n @NgModule({\n   declarations: [\n     DashboardComponent,\n@@ -29,17 +28,8 @@\n   ],\n   imports: [\n     FormsModule,\n     CommonModule,\n-    HighlightJsModule,\n     DashboardRoutingModule\n-  ],\n-  providers: [\n-    {\n-      provide: HIGHLIGHTJS_CONFIG,\n-      useValue: {\n-        lang: 'html'\n-      } as HighlightJsConfig\n-    }\n   ]\n })\n export class DashboardModule { }\n"
                 }
             ],
             "date": 1691712608741,

@@ -13,6 +13,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { CounterModule } from './features/counter/counter.module';
 import { CartModule } from './features/cart/cart.module';
 import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,

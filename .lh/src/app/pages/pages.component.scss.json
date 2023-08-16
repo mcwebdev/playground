@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/app/pages/pages.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1692208469350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692208495286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,9 @@\n     a {\r\n         padding: 5px 10px;\r\n         background-color: rgb(0, 72, 255);\r\n         color: white;\r\n+        text-decoration: none;\r\n+        border-radius: 5px;\r\n+        margin: 0 5px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1692208614089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n nav {\r\n     a {\r\n         padding: 5px 10px;\r\n-        background-color: rgb(0, 72, 255);\r\n+        background-color: #0056b3;\r\n         color: white;\r\n         text-decoration: none;\r\n         border-radius: 5px;\r\n         margin: 0 5px;\r\n"
+                },
+                {
+                    "date": 1692208681351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n         background-color: #0056b3;\r\n         color: white;\r\n         text-decoration: none;\r\n         border-radius: 5px;\r\n-        margin: 0 5px;\r\n+        margin-right: 5px;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1692208705459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,11 @@\n         text-decoration: none;\r\n         border-radius: 5px;\r\n         margin-right: 5px;\r\n     }\r\n+\r\n+    &.hover {\r\n+        a {\r\n+            background-color: #003366;\r\n+        }\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1692208722396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         border-radius: 5px;\r\n         margin-right: 5px;\r\n     }\r\n \r\n-    &.hover {\r\n+    &:hover {\r\n         a {\r\n             background-color: #003366;\r\n         }\r\n     }\r\n"
+                },
+                {
+                    "date": 1692208736396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         border-radius: 5px;\r\n         margin-right: 5px;\r\n     }\r\n \r\n-    &:hover {\r\n+    :hover {\r\n         a {\r\n             background-color: #003366;\r\n         }\r\n     }\r\n"
+                },
+                {
+                    "date": 1692208759578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,7 @@\n         margin-right: 5px;\r\n     }\r\n \r\n     :hover {\r\n-        a {\r\n             background-color: #003366;\r\n-        }\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1692212839814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n nav {\r\n+    height: 60px;\r\n     a {\r\n         padding: 5px 10px;\r\n         background-color: #0056b3;\r\n         color: white;\r\n@@ -8,7 +9,7 @@\n         margin-right: 5px;\r\n     }\r\n \r\n     :hover {\r\n-            background-color: #003366;\r\n+        background-color: #003366;\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1692213056425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n nav {\r\n-    height: 60px;\r\n+    //height: 60px;\r\n     a {\r\n         padding: 5px 10px;\r\n         background-color: #0056b3;\r\n         color: white;\r\n"
+                },
+                {
+                    "date": 1692213066476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n nav {\r\n-    //height: 60px;\r\n+    height: 45px;\r\n     a {\r\n         padding: 5px 10px;\r\n         background-color: #0056b3;\r\n         color: white;\r\n"
+                },
+                {
+                    "date": 1692213110812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+nav {\r\n+    height: 45px;\r\n+    a {\r\n+        padding: 5px 10px;\r\n+        background-color: #0056b3;\r\n+        color: white;\r\n+        text-decoration: none;\r\n+        border-radius: 5px;\r\n+        margin-right: 5px;\r\n+        display: inline-block;\r\n+    }\r\n+\r\n+    :hover {\r\n+        background-color: #003366;\r\n+    }\r\n+}\r\n"
+                }
+            ],
+            "date": 1692208469350,
+            "name": "Commit-0",
+            "content": "nav {\r\n    a {\r\n        padding: 5px 10px;\r\n        background-color: rgb(0, 72, 255);\r\n        color: white;\r\n    }\r\n}\r\n"
+        }
+    ]
+}
