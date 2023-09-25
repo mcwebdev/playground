@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1691712608741,
@@ -32,6 +32,10 @@
                 {
                     "date": 1692218839565,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n import { ChangeDetectionDashboardComponent } from './change-detection-dashboard/change-detection-dashboard.component';\n import { SignalsDashboardComponent } from './signals-dashboard/signals-dashboard.component';\n import { ChildComponent } from './change-detection-dashboard/child/child.component';\n import { IoDashboardComponent } from './io-dashboard/io-dashboard.component';\n-import { HighlightJsModule, HighlightJsConfig, HIGHLIGHTJS_CONFIG } from 'ngx-highlight-js';\n \n @NgModule({\n   declarations: [\n     DashboardComponent,\n@@ -29,17 +28,8 @@\n   ],\n   imports: [\n     FormsModule,\n     CommonModule,\n-    HighlightJsModule,\n     DashboardRoutingModule\n-  ],\n-  providers: [\n-    {\n-      provide: HIGHLIGHTJS_CONFIG,\n-      useValue: {\n-        lang: 'html'\n-      } as HighlightJsConfig\n-    }\n   ]\n })\n export class DashboardModule { }\n"
+                },
+                {
+                    "date": 1692322081204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n import { ChangeDetectionDashboardComponent } from './change-detection-dashboard/change-detection-dashboard.component';\n import { SignalsDashboardComponent } from './signals-dashboard/signals-dashboard.component';\n import { ChildComponent } from './change-detection-dashboard/child/child.component';\n import { IoDashboardComponent } from './io-dashboard/io-dashboard.component';\n-\n+import { HighlightModule } from 'ngx-highlightjs';\n @NgModule({\n   declarations: [\n     DashboardComponent,\n     NgrxDashboardComponent,\n@@ -28,8 +28,9 @@\n   ],\n   imports: [\n     FormsModule,\n     CommonModule,\n-    DashboardRoutingModule\n+    DashboardRoutingModule,\n+    HighlightModule\n   ]\n })\n export class DashboardModule { }\n"
                 }
             ],
             "date": 1691712608741,

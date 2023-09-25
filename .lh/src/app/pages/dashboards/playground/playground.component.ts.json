@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/app/pages/dashboards/playground/playground.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1692896195553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692896398256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n   templateUrl: './playground.component.html',\n   styleUrls: ['./playground.component.scss']\n })\n export class PlaygroundComponent {\n-  data = data.simpleArrayOfNumbers\n+  data = data.complexNestedObjects\n }\n"
+                },
+                {
+                    "date": 1692896685612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { Component } from '@angular/core';\n+import * as data from '../../../shared/models/data';\n+@Component({\n+  selector: 'app-playground',\n+  templateUrl: './playground.component.html',\n+  styleUrls: ['./playground.component.scss']\n+})\n+export class PlaygroundComponent {\n+  users = data.complexNestedObjects.users\n+}\n"
+                },
+                {
+                    "date": 1692896948625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,32 @@\n   templateUrl: './playground.component.html',\n   styleUrls: ['./playground.component.scss']\n })\n export class PlaygroundComponent {\n+  data: string = '';\n   users = data.complexNestedObjects.users\n+\n+  constructor() {\n+    this.data = `\n+  export const simpleArrayOfNumbers = [5, 10, 15, 20, 25];\n+  export const mixedTypes = [7, \"apple\", 3.14, \"banana\", 42];\n+  export const nestedArrays = [[1, 2], [3, \"four\"], [5, 6, [7, \"eight\"]]];\n+  export const simpleObject = { \"name\": \"John\", \"age\": 30, \"city\": \"New York\" };\n+  export const mixedObject = { \"id\": 1, \"info\": { \"name\": \"Alice\", \"skills\": [\"Python\", \"JS\"] }, \"grades\": [90, 85, 80] };\n+  export const complexNestedObjects = {\n+      \"users\": [\n+          { \"id\": 1, \"name\": \"Bob\", \"orders\": [{ \"product\": \"Laptop\", \"price\": 1000 }] },\n+          { \"id\": 2, \"name\": \"Sara\", \"orders\": [{ \"product\": \"Phone\", \"price\": 500 }, { \"product\": \"Tablet\", \"price\": 300 }] }\n+      ]\n+  };\n+  export const arraysWithGotchas = [1, \"2\", null, undefined, NaN, { \"key\": \"value\" }, [3, \"four\"]];\n+  export const objectWithFunctions = {\n+      \"calculate\": function (x: number) { return x * 2; },\n+      \"data\": [1, 2, 3],\n+      \"info\": undefined\n+  };\n+  export const mixedTypesWithSpecialCharacters = [1, \"text with spaces\", 3.14, { \"key\": \"value with \\\"quotes\\\"\" }, [5, \"six\"], null];\n+\n+  `\n+  }\n+\n }\n"
+                },
+                {
+                    "date": 1692897018517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,26 +10,26 @@\n   users = data.complexNestedObjects.users\n \n   constructor() {\n     this.data = `\n-  export const simpleArrayOfNumbers = [5, 10, 15, 20, 25];\n-  export const mixedTypes = [7, \"apple\", 3.14, \"banana\", 42];\n-  export const nestedArrays = [[1, 2], [3, \"four\"], [5, 6, [7, \"eight\"]]];\n-  export const simpleObject = { \"name\": \"John\", \"age\": 30, \"city\": \"New York\" };\n-  export const mixedObject = { \"id\": 1, \"info\": { \"name\": \"Alice\", \"skills\": [\"Python\", \"JS\"] }, \"grades\": [90, 85, 80] };\n-  export const complexNestedObjects = {\n-      \"users\": [\n-          { \"id\": 1, \"name\": \"Bob\", \"orders\": [{ \"product\": \"Laptop\", \"price\": 1000 }] },\n-          { \"id\": 2, \"name\": \"Sara\", \"orders\": [{ \"product\": \"Phone\", \"price\": 500 }, { \"product\": \"Tablet\", \"price\": 300 }] }\n-      ]\n-  };\n-  export const arraysWithGotchas = [1, \"2\", null, undefined, NaN, { \"key\": \"value\" }, [3, \"four\"]];\n-  export const objectWithFunctions = {\n-      \"calculate\": function (x: number) { return x * 2; },\n-      \"data\": [1, 2, 3],\n-      \"info\": undefined\n-  };\n-  export const mixedTypesWithSpecialCharacters = [1, \"text with spaces\", 3.14, { \"key\": \"value with \\\"quotes\\\"\" }, [5, \"six\"], null];\n+        export const simpleArrayOfNumbers = [5, 10, 15, 20, 25];\n+        export const mixedTypes = [7, \"apple\", 3.14, \"banana\", 42];\n+        export const nestedArrays = [[1, 2], [3, \"four\"], [5, 6, [7, \"eight\"]]];\n+        export const simpleObject = { \"name\": \"John\", \"age\": 30, \"city\": \"New York\" };\n+        export const mixedObject = { \"id\": 1, \"info\": { \"name\": \"Alice\", \"skills\": [\"Python\", \"JS\"] }, \"grades\": [90, 85, 80] };\n+        export const complexNestedObjects = {\n+            \"users\": [\n+                { \"id\": 1, \"name\": \"Bob\", \"orders\": [{ \"product\": \"Laptop\", \"price\": 1000 }] },\n+                { \"id\": 2, \"name\": \"Sara\", \"orders\": [{ \"product\": \"Phone\", \"price\": 500 }, { \"product\": \"Tablet\", \"price\": 300 }] }\n+            ]\n+        };\n+        export const arraysWithGotchas = [1, \"2\", null, undefined, NaN, { \"key\": \"value\" }, [3, \"four\"]];\n+        export const objectWithFunctions = {\n+            \"calculate\": function (x: number) { return x * 2; },\n+            \"data\": [1, 2, 3],\n+            \"info\": undefined\n+        };\n+        export const mixedTypesWithSpecialCharacters = [1, \"text with spaces\", 3.14, { \"key\": \"value with \\\"quotes\\\"\" }, [5, \"six\"], null];\n \n   `\n   }\n \n"
+                },
+                {
+                    "date": 1692897434797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   styleUrls: ['./playground.component.scss']\n })\n export class PlaygroundComponent {\n   data: string = '';\n-  users = data.complexNestedObjects.users\n+  users = data.complexNestedObjects.users;\n \n   constructor() {\n     this.data = `\n         export const simpleArrayOfNumbers = [5, 10, 15, 20, 25];\n"
+                },
+                {
+                    "date": 1692898021018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n import { Component } from '@angular/core';\n import * as data from '../../../shared/models/data';\n+import { of, fromEvent , take, takeLast, tap} from 'rxjs';\n+import { mergeMap, switchMap, delay, map, filter, \n+  find,   catchError, reduce, debounceTime, \n+  distinctUntilChanged, combineLatestWith } from 'rxjs/operators';\n @Component({\n   selector: 'app-playground',\n   templateUrl: './playground.component.html',\n   styleUrls: ['./playground.component.scss']\n"
+                },
+                {
+                    "date": 1692898165499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n import { of, fromEvent, take, takeLast, tap } from 'rxjs';\n import {\n   mergeMap, switchMap, delay, map, filter,\n   find, catchError, reduce, debounceTime,\n-  distinctUntilChanged, combineLatestWith\n+  distinctUntilChanged, combineLatestWith,\n+  concatMap, exhaustMap, takeUntil, takeWhile,\n+  startWith, shareReplay, retry,\n } from 'rxjs/operators';\n @Component({\n   selector: 'app-playground',\n   templateUrl: './playground.component.html',\n"
+                },
+                {
+                    "date": 1692899462415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,24 @@\n-import { Component } from '@angular/core';\n+import { Component, OnInit } from '@angular/core';\n import * as data from '../../../shared/models/data';\n-import { of, fromEvent, take, takeLast, tap } from 'rxjs';\n+import { of, fromEvent } from 'rxjs';\n import {\n   mergeMap, switchMap, delay, map, filter,\n   find, catchError, reduce, debounceTime,\n   distinctUntilChanged, combineLatestWith,\n   concatMap, exhaustMap, takeUntil, takeWhile,\n-  startWith, shareReplay, retry,\n+  startWith, shareReplay, retry, take, takeLast, tap\n } from 'rxjs/operators';\n+\n @Component({\n   selector: 'app-playground',\n   templateUrl: './playground.component.html',\n   styleUrls: ['./playground.component.scss']\n })\n-export class PlaygroundComponent {\n-  data: string = '';\n+export class PlaygroundComponent implements OnInit {\n+  results: any[] = [];\n   users = data.complexNestedObjects.users;\n-\n+data: string;\n   constructor() {\n     this.data = `\n         export const simpleArrayOfNumbers = [5, 10, 15, 20, 25];\n         export const mixedTypes = [7, \"apple\", 3.14, \"banana\", 42];\n@@ -36,9 +37,12 @@\n             \"data\": [1, 2, 3],\n             \"info\": undefined\n         };\n         export const mixedTypesWithSpecialCharacters = [1, \"text with spaces\", 3.14, { \"key\": \"value with \\\"quotes\\\"\" }, [5, \"six\"], null];\n+    `;\n+  }\n \n-  `\n+  ngOnInit() {\n+    // Include all the examples from Parts 1, 2, and 3 here\n+    // ...\n   }\n-\n }\n"
+                }
+            ],
+            "date": 1692896195553,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\nimport * as data from '../../../shared/models/data';\n@Component({\n  selector: 'app-playground',\n  templateUrl: './playground.component.html',\n  styleUrls: ['./playground.component.scss']\n})\nexport class PlaygroundComponent {\n  data = data.simpleArrayOfNumbers\n}\n"
+        }
+    ]
+}

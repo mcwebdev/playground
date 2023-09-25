@@ -1,0 +1,194 @@
+{
+    "sourceFile": "src/app/pages/dashboards/playground/playground.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 44,
+            "patches": [
+                {
+                    "date": 1692900382763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693005407589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+button {\r\n+    margin: 10px;\r\n+}\r\n+\r\n+pre {\r\n+    max-width: 800px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693005415050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+button {\r\n+    margin: 10px;\r\n+}\r\n+\r\n+pre {\r\n+    max-width: 900px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693005482697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,4 +4,9 @@\n \r\n pre {\r\n     max-width: 900px;\r\n }\r\n+\r\n+.actions {\r\n+    padding: 10px;\r\n+    background-color: #f5f5f5;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693005579225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+button {\r\n+    margin: 10px;\r\n+}\r\n+\r\n+pre {\r\n+    max-width: 900px;\r\n+}\r\n+\r\n+.actions {\r\n+    padding: 10px;\r\n+    background-color: #f5f5f5;\r\n+    margin: 20px 0;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693005594824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n button {\r\n-    margin: 10px;\r\n+    margin: 5px;\r\n }\r\n \r\n pre {\r\n     max-width: 900px;\r\n"
+                },
+                {
+                    "date": 1693005631524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,4 +10,8 @@\n     padding: 10px;\r\n     background-color: #f5f5f5;\r\n     margin: 20px 0;\r\n }\r\n+\r\n+p {\r\n+    padding: 5px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693005652216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n .actions {\r\n     padding: 10px;\r\n     background-color: #f5f5f5;\r\n     margin: 20px 0;\r\n+    width: fit-content;\r\n }\r\n \r\n p {\r\n     padding: 5px;\r\n"
+                },
+                {
+                    "date": 1693005694831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n     padding: 10px;\r\n     background-color: #f5f5f5;\r\n     margin: 20px 0;\r\n     width: fit-content;\r\n+    width: 1000px;\r\n }\r\n \r\n p {\r\n     padding: 5px;\r\n"
+                },
+                {
+                    "date": 1693005711187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     margin: 5px;\r\n }\r\n \r\n pre {\r\n-    max-width: 900px;\r\n+    max-width: 980px;\r\n }\r\n \r\n .actions {\r\n     padding: 10px;\r\n"
+                },
+                {
+                    "date": 1693005754352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+button {\r\n+    margin: 5px;\r\n+}\r\n+\r\n+pre {\r\n+    max-width: 980px;\r\n+}\r\n+\r\n+.actions {\r\n+    padding: 10px;\r\n+    background-color: #f5f5f5;\r\n+    margin: 20px 0;\r\n+    width: fit-content;\r\n+    width: 1000px;\r\n+}\r\n+\r\n+p {\r\n+    padding: 5px;\r\n+}\r\n+\r\n+.hljs-subst {\r\n+    color: #b5b9bd;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693005767854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n     padding: 5px;\r\n }\r\n \r\n .hljs-subst {\r\n-    color: #b5b9bd;\r\n+    color: #b5b9bd !important;\r\n }\r\n"
+                },
+                {
+                    "date": 1693005800953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n p {\r\n     padding: 5px;\r\n }\r\n \r\n-.hljs-subst {\r\n+::ng-deep .hljs-subst {\r\n     color: #b5b9bd !important;\r\n }\r\n"
+                },
+                {
+                    "date": 1693005824369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n     padding: 5px;\r\n }\r\n \r\n ::ng-deep .hljs-subst {\r\n-    color: #b5b9bd !important;\r\n+    color: #a8007b !important;\r\n }\r\n"
+                },
+                {
+                    "date": 1693005834242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n     padding: 5px;\r\n }\r\n \r\n ::ng-deep .hljs-subst {\r\n-    color: #a8007b !important;\r\n+    color: #ff00bb !important;\r\n }\r\n"
+                },
+                {
+                    "date": 1693005954051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,17 @@\n     margin: 5px;\r\n }\r\n \r\n pre {\r\n-    max-width: 980px;\r\n+    max-width: 880px;\r\n }\r\n \r\n .actions {\r\n     padding: 10px;\r\n     background-color: #f5f5f5;\r\n     margin: 20px 0;\r\n     width: fit-content;\r\n-    width: 1000px;\r\n+    width: 900px;\r\n }\r\n \r\n p {\r\n     padding: 5px;\r\n"
+                },
+                {
+                    "date": 1693007701129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,17 @@\n     margin: 5px;\r\n }\r\n \r\n pre {\r\n-    max-width: 880px;\r\n+    max-width: 780px;\r\n }\r\n \r\n .actions {\r\n     padding: 10px;\r\n     background-color: #f5f5f5;\r\n     margin: 20px 0;\r\n     width: fit-content;\r\n-    width: 900px;\r\n+    width: 800px;\r\n }\r\n \r\n p {\r\n     padding: 5px;\r\n"
+                },
+                {
+                    "date": 1693007749299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n }\r\n \r\n p {\r\n     padding: 5px;\r\n+    margin: 0;\r\n }\r\n \r\n ::ng-deep .hljs-subst {\r\n     color: #ff00bb !important;\r\n"
+                },
+                {
+                    "date": 1693007802804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,17 +7,19 @@\n }\r\n \r\n .actions {\r\n     padding: 10px;\r\n-    background-color: #f5f5f5;\r\n+    background-color: #d7d7d7;\r\n     margin: 20px 0;\r\n+    width: -moz-fit-content;\r\n     width: fit-content;\r\n     width: 800px;\r\n+    border-radius: 5px;\r\n }\r\n \r\n p {\r\n     padding: 5px;\r\n-    margin: 0;\r\n+    margin: 0 0 10px 0;\r\n }\r\n \r\n ::ng-deep .hljs-subst {\r\n     color: #ff00bb !important;\r\n"
+                },
+                {
+                    "date": 1693007835281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n .actions {\r\n     padding: 10px;\r\n     background-color: #d7d7d7;\r\n-    margin: 20px 0;\r\n+    margin: 20px 0 30px;\r\n     width: -moz-fit-content;\r\n     width: fit-content;\r\n     width: 800px;\r\n     border-radius: 5px;\r\n"
+                },
+                {
+                    "date": 1693007860646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n .actions {\r\n     padding: 10px;\r\n     background-color: #d7d7d7;\r\n-    margin: 20px 0 30px;\r\n+    margin: 20px 0 50px;\r\n     width: -moz-fit-content;\r\n     width: fit-content;\r\n     width: 800px;\r\n     border-radius: 5px;\r\n"
+                },
+                {
+                    "date": 1693010079989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n \r\n p {\r\n     padding: 5px;\r\n     margin: 0 0 10px 0;\r\n+    font-size: 12px;\r\n }\r\n \r\n ::ng-deep .hljs-subst {\r\n     color: #ff00bb !important;\r\n"
+                },
+                {
+                    "date": 1693010153949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     border-radius: 5px;\r\n }\r\n \r\n p {\r\n-    padding: 5px;\r\n+    padding: 5px 5px 15px;\r\n     margin: 0 0 10px 0;\r\n     font-size: 12px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1693010181981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n button {\r\n-    margin: 5px;\r\n+    margin: 5px 0;\r\n }\r\n \r\n pre {\r\n     max-width: 780px;\r\n"
+                },
+                {
+                    "date": 1693010246373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     max-width: 780px;\r\n }\r\n \r\n .actions {\r\n-    padding: 10px;\r\n+    padding: 10px 10px 15px;\r\n     background-color: #d7d7d7;\r\n     margin: 20px 0 50px;\r\n     width: -moz-fit-content;\r\n     width: fit-content;\r\n"
+                },
+                {
+                    "date": 1693010254004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     max-width: 780px;\r\n }\r\n \r\n .actions {\r\n-    padding: 10px 10px 15px;\r\n+    padding: 10px 10px 25px;\r\n     background-color: #d7d7d7;\r\n     margin: 20px 0 50px;\r\n     width: -moz-fit-content;\r\n     width: fit-content;\r\n"
+                },
+                {
+                    "date": 1693010270968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     border-radius: 5px;\r\n }\r\n \r\n p {\r\n-    padding: 5px 5px 15px;\r\n+    padding: 5px 5px 10px;\r\n     margin: 0 0 10px 0;\r\n     font-size: 12px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1693010299470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,11 @@\n button {\r\n     margin: 5px 0;\r\n+    cursor: pointer;\r\n+\r\n+    :hover {\r\n+        background-color: #e6e6e6;\r\n+    }\r\n }\r\n \r\n pre {\r\n     max-width: 780px;\r\n"
+                },
+                {
+                    "date": 1693010308167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     margin: 5px 0;\r\n     cursor: pointer;\r\n \r\n     :hover {\r\n-        background-color: #e6e6e6;\r\n+        background-color: #079439;\r\n     }\r\n }\r\n \r\n pre {\r\n"
+                },
+                {
+                    "date": 1693010320279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+button {\r\n+    margin: 5px 0;\r\n+    cursor: pointer;\r\n+\r\n+    ::hover {\r\n+        background-color: #079439;\r\n+    }\r\n+}\r\n+\r\n+pre {\r\n+    max-width: 780px;\r\n+}\r\n+\r\n+.actions {\r\n+    padding: 10px 10px 25px;\r\n+    background-color: #d7d7d7;\r\n+    margin: 20px 0 50px;\r\n+    width: -moz-fit-content;\r\n+    width: fit-content;\r\n+    width: 800px;\r\n+    border-radius: 5px;\r\n+}\r\n+\r\n+p {\r\n+    padding: 5px 5px 10px;\r\n+    margin: 0 0 10px 0;\r\n+    font-size: 12px;\r\n+}\r\n+\r\n+::ng-deep .hljs-subst {\r\n+    color: #ff00bb !important;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693010344815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n button {\r\n     margin: 5px 0;\r\n     cursor: pointer;\r\n \r\n-    ::hover {\r\n-        background-color: #079439;\r\n+    &:hover {\r\n+        opacity: 0.8;\r\n     }\r\n }\r\n \r\n pre {\r\n"
+                },
+                {
+                    "date": 1693010376173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     margin: 5px 0;\r\n     cursor: pointer;\r\n \r\n     &:hover {\r\n-        opacity: 0.8;\r\n+        background-color: #0a8427;\r\n     }\r\n }\r\n \r\n pre {\r\n"
+                },
+                {
+                    "date": 1693010510841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n     width: -moz-fit-content;\r\n     width: fit-content;\r\n     width: 800px;\r\n     border-radius: 5px;\r\n+    border: solid 1px #bfbfbf;\r\n }\r\n \r\n p {\r\n     padding: 5px 5px 10px;\r\n"
+                },
+                {
+                    "date": 1693011128915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n button {\r\n-    margin: 5px 0;\r\n+    margin: 5px;\r\n     cursor: pointer;\r\n \r\n     &:hover {\r\n         background-color: #0a8427;\r\n"
+                },
+                {
+                    "date": 1693011141635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,77 +30,4 @@\n \r\n ::ng-deep .hljs-subst {\r\n     color: #ff00bb !important;\r\n }\r\n-button {\r\n-    margin: 5px 0;\r\n-    cursor: pointer;\r\n-\r\n-    :hover {\r\n-        background-color: #079439;\r\n-    }\r\n-}\r\n-\r\n-pre {\r\n-    max-width: 780px;\r\n-}\r\n-\r\n-.actions {\r\n-    padding: 10px 10px 25px;\r\n-    background-color: #d7d7d7;\r\n-    margin: 20px 0 50px;\r\n-    width: -moz-fit-content;\r\n-    width: fit-content;\r\n-    width: 800px;\r\n-    border-radius: 5px;\r\n-}\r\n-\r\n-p {\r\n-    padding: 5px 5px 10px;\r\n-    margin: 0 0 10px 0;\r\n-    font-size: 12px;\r\n-}\r\n-\r\n-::ng-deep .hljs-subst {\r\n-    color: #ff00bb !important;\r\n-}\r\n-button {\r\n-    margin: 5px;\r\n-}\r\n-\r\n-pre {\r\n-    max-width: 980px;\r\n-}\r\n-\r\n-.actions {\r\n-    padding: 10px;\r\n-    background-color: #f5f5f5;\r\n-    margin: 20px 0;\r\n-    width: fit-content;\r\n-    width: 1000px;\r\n-}\r\n-\r\n-p {\r\n-    padding: 5px;\r\n-}\r\n-button {\r\n-    margin: 10px;\r\n-}\r\n-\r\n-pre {\r\n-    max-width: 900px;\r\n-}\r\n-\r\n-.actions {\r\n-    padding: 10px;\r\n-    background-color: #f5f5f5;\r\n-}\r\n-button {\r\n-    margin: 10px;\r\n-}\r\n-\r\n-pre {\r\n-    max-width: 800px;\r\n-}\r\n-button {\r\n-    margin: 10px;\r\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693011159943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n button {\r\n-    margin: 5px;\r\n     cursor: pointer;\r\n \r\n     &:hover {\r\n         background-color: #0a8427;\r\n"
+                },
+                {
+                    "date": 1693011167663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n button {\r\n+    margin: 0 5px;\r\n     cursor: pointer;\r\n \r\n     &:hover {\r\n         background-color: #0a8427;\r\n"
+                },
+                {
+                    "date": 1693011179249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+button {\r\n+    margin: 0 5px 0;\r\n+    cursor: pointer;\r\n+\r\n+    &:hover {\r\n+        background-color: #0a8427;\r\n+    }\r\n+}\r\n+\r\n+pre {\r\n+    max-width: 780px;\r\n+}\r\n+\r\n+.actions {\r\n+    padding: 10px 10px 25px;\r\n+    background-color: #d7d7d7;\r\n+    margin: 20px 0 50px;\r\n+    width: -moz-fit-content;\r\n+    width: fit-content;\r\n+    width: 800px;\r\n+    border-radius: 5px;\r\n+    border: solid 1px #bfbfbf;\r\n+}\r\n+\r\n+p {\r\n+    padding: 5px 5px 10px;\r\n+    margin: 0 0 10px 0;\r\n+    font-size: 12px;\r\n+}\r\n+\r\n+::ng-deep .hljs-subst {\r\n+    color: #ff00bb !important;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693011189345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n button {\r\n-    margin: 0 5px 0;\r\n+    margin: 0 5px 0 0;\r\n     cursor: pointer;\r\n \r\n     &:hover {\r\n         background-color: #0a8427;\r\n"
+                },
+                {
+                    "date": 1693011222504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n button {\r\n     margin: 0 5px 0 0;\r\n     cursor: pointer;\r\n+    width: 175px;\r\n \r\n     &:hover {\r\n         background-color: #0a8427;\r\n     }\r\n"
+                },
+                {
+                    "date": 1693011241120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,34 @@\n+button {\r\n+    margin: 0 5px 5px 0;\r\n+    cursor: pointer;\r\n+    width: 175px;\r\n+\r\n+    &:hover {\r\n+        background-color: #0a8427;\r\n+    }\r\n+}\r\n+\r\n+pre {\r\n+    max-width: 780px;\r\n+}\r\n+\r\n+.actions {\r\n+    padding: 10px 10px 25px;\r\n+    background-color: #d7d7d7;\r\n+    margin: 20px 0 50px;\r\n+    width: -moz-fit-content;\r\n+    width: fit-content;\r\n+    width: 800px;\r\n+    border-radius: 5px;\r\n+    border: solid 1px #bfbfbf;\r\n+}\r\n+\r\n+p {\r\n+    padding: 5px 5px 10px;\r\n+    margin: 0 0 10px 0;\r\n+    font-size: 12px;\r\n+}\r\n+\r\n+::ng-deep .hljs-subst {\r\n+    color: #ff00bb !important;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693011282074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n button {\r\n     margin: 0 5px 5px 0;\r\n     cursor: pointer;\r\n     width: 175px;\r\n+    text-align: left;\r\n \r\n     &:hover {\r\n         background-color: #0a8427;\r\n     }\r\n"
+                },
+                {
+                    "date": 1693011344523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+button {\r\n+    margin: 0 5px 5px 0;\r\n+    cursor: pointer;\r\n+    width: 175px;\r\n+    text-align: left;\r\n+\r\n+    &:hover {\r\n+        background-color: #0a8427;\r\n+    }\r\n+}\r\n+\r\n+pre {\r\n+    max-width: 780px;\r\n+}\r\n+\r\n+.actions {\r\n+    padding: 10px 10px 25px;\r\n+    background-color: #d7d7d7;\r\n+    margin: 20px 0 50px;\r\n+    width: 777px;\r\n+    border-radius: 5px;\r\n+    border: solid 1px #bfbfbf;\r\n+}\r\n+\r\n+p {\r\n+    padding: 5px 5px 10px;\r\n+    margin: 0 0 10px 0;\r\n+    font-size: 12px;\r\n+}\r\n+\r\n+::ng-deep .hljs-subst {\r\n+    color: #ff00bb !important;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693011431987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,34 @@\n+button {\r\n+    margin: 0 5px 5px 0;\r\n+    cursor: pointer;\r\n+    width: 175px;\r\n+    text-align: left;\r\n+\r\n+    &:hover {\r\n+        background-color: #0a8427;\r\n+    }\r\n+}\r\n+\r\n+pre {\r\n+    max-width: 780px;\r\n+}\r\n+\r\n+.actions {\r\n+    padding: 10px 10px 25px;\r\n+    background-color: #d7d7d7;\r\n+    margin: 20px 0 50px;\r\n+    width: 777px;\r\n+    border-radius: 5px;\r\n+    border: solid 1px #bfbfbf;\r\n+}\r\n+\r\n+p {\r\n+    padding: 5px 5px 10px;\r\n+    margin: 0 0 10px 0;\r\n+    font-size: 12px;\r\n+    width: calc(100% - 191px);\r\n+}\r\n+\r\n+::ng-deep .hljs-subst {\r\n+    color: #ff00bb !important;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693249111834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,4 @@\n-button {\r\n-    margin: 0 5px 5px 0;\r\n-    cursor: pointer;\r\n-    width: 175px;\r\n-    text-align: left;\r\n-\r\n-    &:hover {\r\n-        background-color: #0a8427;\r\n-    }\r\n-}\r\n-\r\n pre {\r\n     max-width: 780px;\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1692900382763,
+            "name": "Commit-0",
+            "content": "button {\r\n    margin: 10px;\r\n}"
+        }
+    ]
+}

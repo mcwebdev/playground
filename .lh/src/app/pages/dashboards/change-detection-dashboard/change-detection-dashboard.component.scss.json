@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/pages/dashboards/change-detection-dashboard/change-detection-dashboard.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1692321507232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692321518804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n button {\r\n     margin: 20px;\r\n+    cursor: pointer;\r\n }\r\n"
+                }
+            ],
+            "date": 1692321507232,
+            "name": "Commit-0",
+            "content": "button {\r\n    margin: 20px;\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/app/pages/dashboards/rxjs-dashboard/rxjs-dashboard.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1692726683038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692726700450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n pre {\r\n     margin: 20px 0;\r\n+    max-width: 600px;\r\n }\r\n"
+                },
+                {
+                    "date": 1692726706716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n pre {\r\n     margin: 20px 0;\r\n-    max-width: 600px;\r\n+    max-width: 900px;\r\n }\r\n"
+                },
+                {
+                    "date": 1692726722412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n pre {\r\n     margin: 20px 0;\r\n-    max-width: 900px;\r\n+    max-width: 70px;\r\n }\r\n"
+                },
+                {
+                    "date": 1693252626808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+pre {\r\n+    margin: 20px 0;\r\n+    max-width: 750px;\r\n+    font-size: 18px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693252684694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n pre {\r\n     margin: 20px 0;\r\n     max-width: 750px;\r\n-    font-size: 18px;\r\n+    font-size: 16px;\r\n }\r\n"
+                },
+                {
+                    "date": 1693252947569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n pre {\r\n     margin: 20px 0;\r\n-    max-width: 750px;\r\n+    max-width: 950px;\r\n     font-size: 16px;\r\n }\r\n"
+                },
+                {
+                    "date": 1693502151887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,4 +2,15 @@\n     margin: 20px 0;\r\n     max-width: 950px;\r\n     font-size: 16px;\r\n }\r\n+\r\n+.stopwatch {\r\n+    text-align: center;\r\n+    font-size: 2em;\r\n+    margin: 20px;\r\n+}\r\n+\r\n+button {\r\n+    font-size: 1em;\r\n+    margin: 5px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1693503746833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,6 @@\n     margin: 20px;\r\n }\r\n \r\n button {\r\n-    font-size: 1em;\r\n     margin: 5px;\r\n }\r\n"
+                },
+                {
+                    "date": 1693515185443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,7 @@\n }\r\n \r\n button {\r\n     margin: 5px;\r\n+    width: 100px;\r\n+    text-align: center;\r\n }\r\n"
+                },
+                {
+                    "date": 1693516188884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n pre {\r\n     margin: 20px 0;\r\n-    max-width: 950px;\r\n+    width: 950px;\r\n     font-size: 16px;\r\n }\r\n \r\n .stopwatch {\r\n"
+                }
+            ],
+            "date": 1692726683038,
+            "name": "Commit-0",
+            "content": "pre {\r\n    margin: 20px 0;\r\n}"
+        }
+    ]
+}

@@ -1,1 +1,101 @@
-<p>rxjs-dashboard works!</p>
+<div>
+    <p>RXJS Scheduler example</p>
+    <div class="fxLayoutRow">
+        <pre><code class="language-html" [highlight]="scheduler"></code></pre>
+        <div class="fxLayoutColumn" style="padding: 20px;">
+            <button style="margin-bottom: 20px;" (click)="startObservables()">Start Scheduler</button>
+            <div *ngFor="let message of outputMessage">
+                <p> {{ message }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fxLayoutRow">
+    <pre><code class="" [highlight]="stopwatch"></code></pre>
+    <div class="stopwatch">
+        <h1>{{ elapsedTime }} seconds</h1>
+        <h2>{{completed}}</h2>
+        <button (click)="start()">Start</button>
+        <button (click)="togglePause()">{{ isPaused ? 'Unpause' : 'Pause' }}</button>
+        <button (click)="complete()">Complete</button>
+    </div>
+</div>
+
+<h2>mergeMap</h2>
+<p><strong>Alias:</strong> flatMap</p>
+<p>
+    <strong>Behavior:</strong> It takes a value from the source observable and
+    maps it to a new inner observable. The values from all active inner
+    observables are then emitted as they arrive.
+</p>
+<p>
+    <strong>Concurrency:</strong> All inner observables are subscribed to
+    concurrently. Values are emitted from the inner observables as they arrive,
+    regardless of the order of source values.
+</p>
+<p>
+    <strong>Use Case:</strong> When you want to perform a side effect for each
+    value from the source and care about all resulting values.
+</p>
+<pre><code class="language-html" [highlight]="code"></code></pre>
+<pre><code class="language-html" [highlight]="code2"></code></pre>
+<h2>switchMap</h2>
+<p>
+    <strong>Behavior:</strong> Like mergeMap, it maps each value to a new
+    observable. However, it unsubscribes from the previously mapped observable
+    when a new value arrives from the source.
+</p>
+<p>
+    <strong>Concurrency:</strong> Only one inner observable is active at a time.
+    When a new inner observable is created, the previous one is unsubscribed from,
+    and its values are ignored.
+</p>
+<p>
+    <strong>Use Case:</strong> When you want to perform a side effect for the
+    latest value and ignore any previously pending async operations.
+</p>
+
+<pre><code class="language-html" [highlight]="code1"></code></pre>
+<pre><code class="language-html" [highlight]="code3"></code></pre>
+
+<h4>mergeMap Complex Case: Loading Multiple Dependencies Concurrently</h4>
+<p>
+    Imagine an application where you need to load multiple dependent resources
+    from various endpoints. These resources might include user information, user's
+    posts, friends' information, etc. You want to initiate these requests
+    concurrently, and you're interested in handling all the results, not just the
+    latest one.
+</p>
+<pre><code class="language-html" [highlight]="code4"></code></pre>
+<strong>Summary:</strong>
+<p>
+    In this example, mergeMap is used to initiate multiple dependent requests
+    concurrently. The results from all of these requests are important, and they
+    are handled separately.
+</p>
+
+<p>
+    This contrasts with a use case for switchMap, where you would only be
+    interested in the result of the latest observable. By using mergeMap, you're
+    able to handle complex scenarios where multiple concurrent operations are
+    required, and all results are relevant.
+</p>
+
+<p>
+    This pattern is particularly useful in applications where various parts of the
+    UI depend on different data sets, and you want to initiate loading of these
+    data sets concurrently to optimize the loading time.
+</p>
+
+
+<h4>1. Handling User Interactions (Autocomplete)</h4>
+<pre><code class="language-html" [highlight]="code5"></code></pre>
+<h4>2. Managing Multiple Asynchronous Operations</h4>
+<pre><code class="language-html" [highlight]="code6"></code></pre>
+<h4>3. State Management</h4>
+<pre><code class="language-html" [highlight]="code7"></code></pre>
+<h4>4. WebSockets and Real-Time Communication</h4>
+<pre><code class="language-html" [highlight]="code8"></code></pre>
+<h4>5. Animations and Time-Based Operations</h4>
+<pre><code class="language-html" [highlight]="code9"></code></pre>

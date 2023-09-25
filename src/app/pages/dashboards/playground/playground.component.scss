@@ -1,0 +1,23 @@
+pre {
+    max-width: 780px;
+}
+
+.actions {
+    padding: 10px 10px 25px;
+    background-color: #d7d7d7;
+    margin: 20px 0 50px;
+    width: 777px;
+    border-radius: 5px;
+    border: solid 1px #bfbfbf;
+}
+
+p {
+    padding: 5px 5px 10px;
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    width: calc(100% - 191px);
+}
+
+::ng-deep .hljs-subst {
+    color: #ff00bb !important;
+}

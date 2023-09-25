@@ -1,0 +1,23 @@
+<h3>RXJS Auction</h3>
+<button (click)="startBidding()">Start Bidding</button>
+<button (click)="stopBidding$.next(0)">Stop Bidding</button>
+<div class="bidding-results">
+    <h1>Bidding Results</h1>
+    <ul>
+        <li *ngFor="let result of results">{{ result }}</li>
+    </ul>
+</div>
+
+<pre><code class="language-html" [highlight]="exampleData"></code></pre>
+
+
+<div *ngFor="let action of actions" class="actions">
+    <div class="fxLayoutRow">
+        <button (click)="action.execute()">{{ action.title }}</button>
+        <p>
+            {{ action.explanation }}
+        </p>
+    </div>
+    <pre><code class="language-javascript" [highlight]="action.codeSnippet"></code></pre>
+    <div *ngFor="let result of action.resultArray">{{ result }}</div>
+</div>

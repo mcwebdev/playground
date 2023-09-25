@@ -1,0 +1,98 @@
+{
+    "sourceFile": "src/app/pages/dashboards/playground/playground.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1692896192154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1692896522183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n-<p>\n-    {{data}}\n-</p>\n+<ul>\n+    <li *ngFor=\"let item of data\">\n+        {{item.name}}</li>>\n+</ul>>\n"
+                },
+                {
+                    "date": 1692896682679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n <ul>\n-    <li *ngFor=\"let item of data\">\n-        {{item.name}}</li>>\n+    <li *ngFor=\"let user of users\">\n+        {{user.name}}\n+    </li>>\n </ul>>\n"
+                },
+                {
+                    "date": 1692896695102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <ul>\n     <li *ngFor=\"let user of users\">\n         {{user.name}}\n-    </li>>\n+    </li>\n </ul>>\n"
+                },
+                {
+                    "date": 1692896703261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <ul>\n     <li *ngFor=\"let user of users\">\n         {{user.name}}\n     </li>\n-</ul>>\n+</ul>\n"
+                },
+                {
+                    "date": 1692897018515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+<pre><code class=\"language-html\" [highlight]=\"data\"></code></pre>\n <ul>\n     <li *ngFor=\"let user of users\">\n         {{user.name}}\n     </li>\n"
+                },
+                {
+                    "date": 1692897183963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,11 @@\n <pre><code class=\"language-html\" [highlight]=\"data\"></code></pre>\n <ul>\n     <li *ngFor=\"let user of users\">\n-        {{user.name}}\n+        {{user.name}}:\n+        <ul>\n+            <li *ngFor=\"let order of user.orders\">\n+                {{order.product}}\n+            </li>\n+        </ul>\n     </li>\n </ul>\n"
+                },
+                {
+                    "date": 1692897421602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,17 @@\n <pre><code class=\"language-html\" [highlight]=\"data\"></code></pre>\n <ul>\n+    <!-- export const complexNestedObjects = {\n+    \"users\": [\n+    { \"id\": 1, \"name\": \"Bob\", \"orders\": [{ \"product\": \"Laptop\", \"price\": 1000 }] },\n+    { \"id\": 2, \"name\": \"Sara\", \"orders\": [{ \"product\": \"Phone\", \"price\": 500 }, { \"product\": \"Tablet\", \"price\": 300 }] }\n+    ]\n+    }; -->\n     <li *ngFor=\"let user of users\">\n         {{user.name}}:\n         <ul>\n             <li *ngFor=\"let order of user.orders\">\n-                {{order.product}}\n+                {{order.product}}{{order.price}}\n             </li>\n         </ul>\n     </li>\n </ul>\n"
+                },
+                {
+                    "date": 1692897434798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <li *ngFor=\"let user of users\">\n         {{user.name}}:\n         <ul>\n             <li *ngFor=\"let order of user.orders\">\n-                {{order.product}}{{order.price}}\n+                {{order.product}} {{order.price}}\n             </li>\n         </ul>\n     </li>\n </ul>\n"
+                },
+                {
+                    "date": 1692897504121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     { \"id\": 2, \"name\": \"Sara\", \"orders\": [{ \"product\": \"Phone\", \"price\": 500 }, { \"product\": \"Tablet\", \"price\": 300 }] }\n     ]\n     }; -->\n     <li *ngFor=\"let user of users\">\n-        {{user.name}}:\n+        {{user.id}} {{user.name }}:\n         <ul>\n             <li *ngFor=\"let order of user.orders\">\n                 {{order.product}} {{order.price}}\n             </li>\n"
+                },
+                {
+                    "date": 1692900063564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,33 @@\n-<pre><code class=\"language-html\" [highlight]=\"data\"></code></pre>\n+<button (click)=\"multiplyAllNumbersByTwo()\">Multiply All Numbers by 2</button>\n+<button (click)=\"filterOutNonNumbers()\">Filter Out Non-Numbers</button>\n+<button (click)=\"findFirstArrayWithNumberThree()\">Find First Array Containing Number 3</button>\n+<button (click)=\"sumOfSimpleArrayOfNumbers()\">Sum of simpleArrayOfNumbers</button>\n+<button (click)=\"firstAndLastThreeItemsOfSimpleArrayOfNumbers()\">First 3 and Last 3 Items of\n+    simpleArrayOfNumbers</button>\n+<button (click)=\"logValuesOfSimpleArrayOfNumbers()\">Log Values of simpleArrayOfNumbers</button>\n+<button (click)=\"handleErrorsInArraysWithGotchas()\">Handle Errors in arraysWithGotchas</button>\n+<button (click)=\"delayEmitsOfSimpleArrayOfNumbers()\">Delay Emits of simpleArrayOfNumbers</button>\n+<button (click)=\"debounceClickEvents()\">Debounce Click Events</button>\n+<button (click)=\"removeConsecutiveDuplicatesFromArraysWithGotchas()\">Remove Consecutive Duplicates from\n+    arraysWithGotchas</button>\n+<button (click)=\"multiplyNumbersAndMergeResults()\">Multiply Numbers and Merge Results</button>\n+<button (click)=\"switchToNewObservableForEachNumber()\">Switch to New Observable for Each Number</button>\n+<button (click)=\"combineSimpleArrayOfNumbersWithAnotherObservable()\">Combine simpleArrayOfNumbers with Another\n+    Observable</button>\n+<button (click)=\"concatenateMultiplicationResults()\">Concatenate Multiplication Results</button>\n+<button (click)=\"ignoreNewEmissionsWhilePreviousOnesAreProcessing()\">Ignore New Emissions While Previous Ones Are Still\n+    Processing</button>\n+<button (click)=\"emitValuesUntilClickEvent()\">Emit Values Until Click Event</button>\n+<button (click)=\"emitValuesWhileLessThanTwenty()\">Emit Values While Less Than 20</button>\n+<button (click)=\"startWithASpecificValue()\">Start with a Specific Value</button>\n+<button (click)=\"shareAndReplayLastTwoEmissions()\">Share and Replay Last 2 Emissions</button>\n+<button (click)=\"retryOnErrorThreeTimes()\">Retry on Error 3 Times</button>\n+\n+<div *ngFor=\"let result of results\">{{ result }}</div>\n+\n <ul>\n-    <!-- export const complexNestedObjects = {\n-    \"users\": [\n-    { \"id\": 1, \"name\": \"Bob\", \"orders\": [{ \"product\": \"Laptop\", \"price\": 1000 }] },\n-    { \"id\": 2, \"name\": \"Sara\", \"orders\": [{ \"product\": \"Phone\", \"price\": 500 }, { \"product\": \"Tablet\", \"price\": 300 }] }\n-    ]\n-    }; -->\n+    <!-- export const complexNestedObjects = { ... } -->\n     <li *ngFor=\"let user of users\">\n         {{user.id}} {{user.name }}:\n         <ul>\n             <li *ngFor=\"let order of user.orders\">\n"
+                },
+                {
+                    "date": 1692900356272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,21 @@\n+<pre><code class=\"language-html\" [highlight]=\"exampleData\"></code></pre>\n+<ul>\n+    <!-- export const complexNestedObjects = {\n+    \"users\": [\n+    { \"id\": 1, \"name\": \"Bob\", \"orders\": [{ \"product\": \"Laptop\", \"price\": 1000 }] },\n+    { \"id\": 2, \"name\": \"Sara\", \"orders\": [{ \"product\": \"Phone\", \"price\": 500 }, { \"product\": \"Tablet\", \"price\": 300 }] }\n+    ]\n+    }; -->\n+    <li *ngFor=\"let user of users\">\n+        {{user.id}} {{user.name }}:\n+        <ul>\n+            <li *ngFor=\"let order of user.orders\">\n+                {{order.product}} {{order.price}}\n+            </li>\n+        </ul>\n+    </li>\n+</ul>\n <button (click)=\"multiplyAllNumbersByTwo()\">Multiply All Numbers by 2</button>\n <button (click)=\"filterOutNonNumbers()\">Filter Out Non-Numbers</button>\n <button (click)=\"findFirstArrayWithNumberThree()\">Find First Array Containing Number 3</button>\n <button (click)=\"sumOfSimpleArrayOfNumbers()\">Sum of simpleArrayOfNumbers</button>\n@@ -23,16 +40,4 @@\n <button (click)=\"shareAndReplayLastTwoEmissions()\">Share and Replay Last 2 Emissions</button>\n <button (click)=\"retryOnErrorThreeTimes()\">Retry on Error 3 Times</button>\n \n <div *ngFor=\"let result of results\">{{ result }}</div>\n-\n-<ul>\n-    <!-- export const complexNestedObjects = { ... } -->\n-    <li *ngFor=\"let user of users\">\n-        {{user.id}} {{user.name }}:\n-        <ul>\n-            <li *ngFor=\"let order of user.orders\">\n-                {{order.product}} {{order.price}}\n-            </li>\n-        </ul>\n-    </li>\n-</ul>\n"
+                },
+                {
+                    "date": 1693005088727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,17 @@\n             </li>\n         </ul>\n     </li>\n </ul>\n+\n+\n+<div *ngFor=\"let action of actions\">\n+    <button (click)=\"action.execute()\">{{ action.title }}</button>\n+    <p>{{ action.explanation }}</p>\n+    <pre><code class=\"language-javascript\" [highlight]=\"action.codeSnippet\"></code></pre>\n+</div>\n+\n+\n <button (click)=\"multiplyAllNumbersByTwo()\">Multiply All Numbers by 2</button>\n <button (click)=\"filterOutNonNumbers()\">Filter Out Non-Numbers</button>\n <button (click)=\"findFirstArrayWithNumberThree()\">Find First Array Containing Number 3</button>\n <button (click)=\"sumOfSimpleArrayOfNumbers()\">Sum of simpleArrayOfNumbers</button>\n"
+                },
+                {
+                    "date": 1693005127000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     <p>{{ action.explanation }}</p>\n     <pre><code class=\"language-javascript\" [highlight]=\"action.codeSnippet\"></code></pre>\n </div>\n \n-\n+<!-- \n <button (click)=\"multiplyAllNumbersByTwo()\">Multiply All Numbers by 2</button>\n <button (click)=\"filterOutNonNumbers()\">Filter Out Non-Numbers</button>\n <button (click)=\"findFirstArrayWithNumberThree()\">Find First Array Containing Number 3</button>\n <button (click)=\"sumOfSimpleArrayOfNumbers()\">Sum of simpleArrayOfNumbers</button>\n@@ -46,7 +46,7 @@\n <button (click)=\"emitValuesUntilClickEvent()\">Emit Values Until Click Event</button>\n <button (click)=\"emitValuesWhileLessThanTwenty()\">Emit Values While Less Than 20</button>\n <button (click)=\"startWithASpecificValue()\">Start with a Specific Value</button>\n <button (click)=\"shareAndReplayLastTwoEmissions()\">Share and Replay Last 2 Emissions</button>\n-<button (click)=\"retryOnErrorThreeTimes()\">Retry on Error 3 Times</button>\n+<button (click)=\"retryOnErrorThreeTimes()\">Retry on Error 3 Times</button> -->\n \n <div *ngFor=\"let result of results\">{{ result }}</div>\n"
+                },
+                {
+                    "date": 1693005336743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,33 +20,6 @@\n <div *ngFor=\"let action of actions\">\n     <button (click)=\"action.execute()\">{{ action.title }}</button>\n     <p>{{ action.explanation }}</p>\n     <pre><code class=\"language-javascript\" [highlight]=\"action.codeSnippet\"></code></pre>\n+    <div *ngFor=\"let result of results\">{{ result }}</div>\n </div>\n-\n-<!-- \n-<button (click)=\"multiplyAllNumbersByTwo()\">Multiply All Numbers by 2</button>\n-<button (click)=\"filterOutNonNumbers()\">Filter Out Non-Numbers</button>\n-<button (click)=\"findFirstArrayWithNumberThree()\">Find First Array Containing Number 3</button>\n-<button (click)=\"sumOfSimpleArrayOfNumbers()\">Sum of simpleArrayOfNumbers</button>\n-<button (click)=\"firstAndLastThreeItemsOfSimpleArrayOfNumbers()\">First 3 and Last 3 Items of\n-    simpleArrayOfNumbers</button>\n-<button (click)=\"logValuesOfSimpleArrayOfNumbers()\">Log Values of simpleArrayOfNumbers</button>\n-<button (click)=\"handleErrorsInArraysWithGotchas()\">Handle Errors in arraysWithGotchas</button>\n-<button (click)=\"delayEmitsOfSimpleArrayOfNumbers()\">Delay Emits of simpleArrayOfNumbers</button>\n-<button (click)=\"debounceClickEvents()\">Debounce Click Events</button>\n-<button (click)=\"removeConsecutiveDuplicatesFromArraysWithGotchas()\">Remove Consecutive Duplicates from\n-    arraysWithGotchas</button>\n-<button (click)=\"multiplyNumbersAndMergeResults()\">Multiply Numbers and Merge Results</button>\n-<button (click)=\"switchToNewObservableForEachNumber()\">Switch to New Observable for Each Number</button>\n-<button (click)=\"combineSimpleArrayOfNumbersWithAnotherObservable()\">Combine simpleArrayOfNumbers with Another\n-    Observable</button>\n-<button (click)=\"concatenateMultiplicationResults()\">Concatenate Multiplication Results</button>\n-<button (click)=\"ignoreNewEmissionsWhilePreviousOnesAreProcessing()\">Ignore New Emissions While Previous Ones Are Still\n-    Processing</button>\n-<button (click)=\"emitValuesUntilClickEvent()\">Emit Values Until Click Event</button>\n-<button (click)=\"emitValuesWhileLessThanTwenty()\">Emit Values While Less Than 20</button>\n-<button (click)=\"startWithASpecificValue()\">Start with a Specific Value</button>\n-<button (click)=\"shareAndReplayLastTwoEmissions()\">Share and Replay Last 2 Emissions</button>\n-<button (click)=\"retryOnErrorThreeTimes()\">Retry on Error 3 Times</button> -->\n-\n-<div *ngFor=\"let result of results\">{{ result }}</div>\n"
+                },
+                {
+                    "date": 1693005385181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n </ul>\n \n \n <div *ngFor=\"let action of actions\">\n-    <button (click)=\"action.execute()\">{{ action.title }}</button>\n-    <p>{{ action.explanation }}</p>\n+    <p> <button (click)=\"action.execute()\">{{ action.title }}</button>\n+        {{ action.explanation }}</p>\n     <pre><code class=\"language-javascript\" [highlight]=\"action.codeSnippet\"></code></pre>\n     <div *ngFor=\"let result of results\">{{ result }}</div>\n </div>\n"
+                },
+                {
+                    "date": 1693005452476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     </li>\n </ul>\n \n \n-<div *ngFor=\"let action of actions\">\n+<div *ngFor=\"let action of actions\" class=\"actions\">\n     <p> <button (click)=\"action.execute()\">{{ action.title }}</button>\n         {{ action.explanation }}</p>\n     <pre><code class=\"language-javascript\" [highlight]=\"action.codeSnippet\"></code></pre>\n     <div *ngFor=\"let result of results\">{{ result }}</div>\n"
+                },
+                {
+                    "date": 1693007589986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,11 @@\n </ul>\n \n \n <div *ngFor=\"let action of actions\" class=\"actions\">\n-    <p> <button (click)=\"action.execute()\">{{ action.title }}</button>\n-        {{ action.explanation }}</p>\n+    <p>\n+        <button (click)=\"action.execute()\">{{ action.title }}</button>\n+        {{ action.explanation }}\n+    </p>\n     <pre><code class=\"language-javascript\" [highlight]=\"action.codeSnippet\"></code></pre>\n-    <div *ngFor=\"let result of results\">{{ result }}</div>\n+    <div *ngFor=\"let result of action.resultArray\">{{ result }}</div>\n </div>\n"
+                },
+                {
+                    "date": 1693010101889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n </ul>\n \n \n <div *ngFor=\"let action of actions\" class=\"actions\">\n-    <p>\n-        <button (click)=\"action.execute()\">{{ action.title }}</button>\n+    <button (click)=\"action.execute()\">{{ action.title }}</button><p>\n+        \n         {{ action.explanation }}\n     </p>\n     <pre><code class=\"language-javascript\" [highlight]=\"action.codeSnippet\"></code></pre>\n     <div *ngFor=\"let result of action.resultArray\">{{ result }}</div>\n"
+                },
+                {
+                    "date": 1693010544915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,5 @@\n <pre><code class=\"language-html\" [highlight]=\"exampleData\"></code></pre>\n-<ul>\n-    <!-- export const complexNestedObjects = {\n-    \"users\": [\n-    { \"id\": 1, \"name\": \"Bob\", \"orders\": [{ \"product\": \"Laptop\", \"price\": 1000 }] },\n-    { \"id\": 2, \"name\": \"Sara\", \"orders\": [{ \"product\": \"Phone\", \"price\": 500 }, { \"product\": \"Tablet\", \"price\": 300 }] }\n-    ]\n-    }; -->\n-    <li *ngFor=\"let user of users\">\n-        {{user.id}} {{user.name }}:\n-        <ul>\n-            <li *ngFor=\"let order of user.orders\">\n-                {{order.product}} {{order.price}}\n-            </li>\n-        </ul>\n-    </li>\n-</ul>\n-\n-\n <div *ngFor=\"let action of actions\" class=\"actions\">\n     <button (click)=\"action.execute()\">{{ action.title }}</button>\n     <p>\n         {{ action.explanation }}\n"
+                },
+                {
+                    "date": 1693011085785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n <pre><code class=\"language-html\" [highlight]=\"exampleData\"></code></pre>\n <div *ngFor=\"let action of actions\" class=\"actions\">\n-    <button (click)=\"action.execute()\">{{ action.title }}</button>\n-    <p>\n-        {{ action.explanation }}\n-    </p>\n+    <div>\n+        <button (click)=\"action.execute()\">{{ action.title }}</button>\n+        <p>\n+            {{ action.explanation }}\n+        </p>\n+    </div>\n     <pre><code class=\"language-javascript\" [highlight]=\"action.codeSnippet\"></code></pre>\n     <div *ngFor=\"let result of action.resultArray\">{{ result }}</div>\n </div>\n"
+                }
+            ],
+            "date": 1692896192154,
+            "name": "Commit-0",
+            "content": "<p>\n    {{data}}\n</p>\n"
+        }
+    ]
+}

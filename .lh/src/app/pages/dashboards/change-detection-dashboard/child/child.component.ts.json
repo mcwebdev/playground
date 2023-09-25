@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1692210161142,
@@ -52,6 +52,26 @@
                 {
                     "date": 1692220065676,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import { Component, Input, ChangeDetectionStrategy } from '@angular/core';\n-import { HighlightLoader } from 'ngx-highlightjs';\n @Component({\n   selector: 'app-child',\n   templateUrl: './child.component.html',\n   styleUrls: ['./child.component.scss'],\n@@ -12,8 +11,8 @@\n   changeDetection: ChangeDetectionStrategy.OnPush,\n })\n export class ChildComponent {\n \n-  constructor(private hljsLoader: HighlightLoader) { }\n+  constructor() { }\n   @Input() message: any;\n \n }\n"
+                },
+                {
+                    "date": 1692321827458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';\n+\n+@Component({\n+  selector: 'app-child',\n+  templateUrl: './child.component.html',\n+  styleUrls: ['./child.component.scss'],\n+\n+  changeDetection: ChangeDetectionStrategy.OnPush,\n+\n+  //  OnPush Change Detection Strategy:\n+  //  With the OnPush strategy, Angular only checks for changes if the component's \n+  //  input properties (@Input) change, or if an event bound with @Output emits an event. \n+  //  This can lead to significant performance improvements, especially in applications \n+  //  with complex component trees or heavy rendering.\n+})\n+export class ChildComponent {\n+\n+  constructor() { }\n+  @Input() message: any;\n+\n+}\n"
+                },
+                {
+                    "date": 1692322135569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n   //  This can lead to significant performance improvements, especially in applications \n   //  with complex component trees or heavy rendering.\n })\n export class ChildComponent {\n-\n-  constructor() { }\n+  code: any;\n+  constructor() {\n+    this.code = \"<div>...</div>\"\n+  }\n   @Input() message: any;\n \n }\n"
+                },
+                {
+                    "date": 1692323308772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';\n+\n+@Component({\n+  selector: 'app-child',\n+  templateUrl: './child.component.html',\n+  styleUrls: ['./child.component.scss'],\n+\n+  changeDetection: ChangeDetectionStrategy.OnPush,\n+\n+  //  OnPush Change Detection Strategy:\n+  //  With the OnPush strategy, Angular only checks for changes if the component's \n+  //  input properties (@Input) change, or if an event bound with @Output emits an event. \n+  //  This can lead to significant performance improvements, especially in applications \n+  //  with complex component trees or heavy rendering.\n+})\n+export class ChildComponent {\n+  code: any;\n+  constructor() {\n+    this.code = `function myFunction() {\n+  document.getElementById(\"demo1\").innerHTML = \"Test 1!\";\n+  document.getElementById(\"demo2\").innerHTML = \"Test 2!\";\n+}`;\n+  }\n+  @Input() message: any;\n+\n+}\n"
+                },
+                {
+                    "date": 1692323409304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,12 +15,44 @@\n })\n export class ChildComponent {\n   code: any;\n   constructor() {\n-    this.code = `function myFunction() {\n-  document.getElementById(\"demo1\").innerHTML = \"Test 1!\";\n-  document.getElementById(\"demo2\").innerHTML = \"Test 2!\";\n-}`;\n+    this.code = `\n+    // When using changeDetection: ChangeDetectionStrategy.OnPush, the component will only be\n+    // updated when the input reference changes. You can not update the input object properties and expect\n+    // the component to be updated. You need to create a new object and assign it to the input\n+    // property. This is because the OnPush strategy will only check for reference changes, not\n+    // property changes.\n+    \n+    // if you were to setup breakpoints on the code below, you would observe \n+    // => this.message.text = 'Updated message'; \n+    // however you will not see it render in the view because you did not update the object reference.\n+    // You only updated the object properties. ChangeDetectionStrategy.OnPush requires you update the\n+    // object reference in order for the strategy \".OnPush\" to instantiate and update DOM.\n+\n+    // message = {\n+    //      text: 'Initial message',\n+    //      timestamp: new Date('2023-08-09 11:00:00'),\n+    //  };\n+\n+    // incorrect\n+    // updateMessage() {\n+    //      this.message.text = 'Updated message';\n+    //      this.message.timestamp = new Date();\n+    // }\n+    \n+    //correct\n+    updateMessage() {\n+    this.message = {        \n+        // use the ... operator to copy the properties of the old \n+        // object when merging properties not being updated.\n+\n+        //...this.message,\n+        text: 'Updated message',\n+        timestamp: new Date(),\n+        };\n+    }\n+    `;\n   }\n   @Input() message: any;\n \n }\n"
+                },
+                {
+                    "date": 1692323455263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,18 +28,18 @@\n     // however you will not see it render in the view because you did not update the object reference.\n     // You only updated the object properties. ChangeDetectionStrategy.OnPush requires you update the\n     // object reference in order for the strategy \".OnPush\" to instantiate and update DOM.\n \n-    // message = {\n-    //      text: 'Initial message',\n-    //      timestamp: new Date('2023-08-09 11:00:00'),\n-    //  };\n+     message = {\n+          text: 'Initial message',\n+          timestamp: new Date('2023-08-09 11:00:00'),\n+      };\n \n     // incorrect\n-    // updateMessage() {\n-    //      this.message.text = 'Updated message';\n-    //      this.message.timestamp = new Date();\n-    // }\n+     updateMessage() {\n+          this.message.text = 'Updated message';\n+          this.message.timestamp = new Date();\n+     }\n     \n     //correct\n     updateMessage() {\n     this.message = {        \n"
                 }
             ],
             "date": 1692210161142,

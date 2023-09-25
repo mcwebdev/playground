@@ -12,7 +12,8 @@ import { ChangeDetectionDashboardComponent } from './change-detection-dashboard/
 import { SignalsDashboardComponent } from './signals-dashboard/signals-dashboard.component';
 import { ChildComponent } from './change-detection-dashboard/child/child.component';
 import { IoDashboardComponent } from './io-dashboard/io-dashboard.component';
-
+import { HighlightModule } from 'ngx-highlightjs';
+import { PlaygroundComponent } from './playground/playground.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -24,12 +25,14 @@ import { IoDashboardComponent } from './io-dashboard/io-dashboard.component';
     ChangeDetectionDashboardComponent,
     SignalsDashboardComponent,
     ChildComponent,
-    IoDashboardComponent
+    IoDashboardComponent,
+    PlaygroundComponent
   ],
   imports: [
     FormsModule,
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    HighlightModule
   ]
 })
 export class DashboardModule { }

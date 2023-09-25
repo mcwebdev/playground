@@ -5,6 +5,7 @@ import { NgrxDashboardComponent } from './ngrx-dashboard/ngrx-dashboard.componen
 import { ChangeDetectionDashboardComponent } from './change-detection-dashboard/change-detection-dashboard.component';
 import { RxjsDashboardComponent } from './rxjs-dashboard/rxjs-dashboard.component';
 import { SignalsDashboardComponent } from './signals-dashboard/signals-dashboard.component';
+import { PlaygroundComponent } from './playground/playground.component';
 const routes: Routes = [
     {
         path: '',
@@ -25,6 +26,10 @@ const routes: Routes = [
             {
                 path: 'signalsDashboard',
                 component: SignalsDashboardComponent,
+            },
+            {
+                path: 'playground',
+                component: PlaygroundComponent,
             },
         ],
     },

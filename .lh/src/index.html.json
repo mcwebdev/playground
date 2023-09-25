@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1692218243209,
@@ -16,6 +16,22 @@
                 {
                     "date": 1692220787883,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n <html lang=\"en\">\n \n <head>\n   <meta charset=\"utf-8\">\n-  <title>NgrxPlayground</title>\n+  <title>NG Playground</title>\n   <base href=\"/\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">\n \n"
+                },
+                {
+                    "date": 1692322718190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n   <title>NG Playground</title>\n   <base href=\"/\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">\n-\n+  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css\">\n+  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js\"></script>\n </head>\n \n <body>\n   <app-root></app-root>\n"
+                },
+                {
+                    "date": 1692322990868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n   <title>NG Playground</title>\n   <base href=\"/\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">\n-  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css\">\n-  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js\"></script>\n+\n </head>\n \n <body>\n   <app-root></app-root>\n"
+                },
+                {
+                    "date": 1692323073828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,14 @@\n <html lang=\"en\">\n \n <head>\n   <meta charset=\"utf-8\">\n-  <title>NG Playground</title>\n+  <title>NGPlayground</title>\n   <base href=\"/\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">\n-\n+  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css\">\n+  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js\"></script>\n </head>\n \n <body>\n   <app-root></app-root>\n"
+                },
+                {
+                    "date": 1692325878198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">\n   <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css\">\n   <script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js\"></script>\n+  \n </head>\n \n <body>\n   <app-root></app-root>\n"
                 }
             ],
             "date": 1692218243209,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1692219102120,
@@ -16,6 +16,14 @@
                 {
                     "date": 1692220065703,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,7 @@\n-import { enableProdMode } from '@angular/core';\n import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n \n import { AppModule } from './app/app.module';\n-import {\n-  HighlightAutoResult,\n-  HighlightLoader,\n-  HighlightModule,\n-  HighlightOptions,\n-  HIGHLIGHT_OPTIONS,\n-} from 'ngx-highlightjs';\n \n-platformBrowserDynamic([\n-  {\n-    provide: HIGHLIGHT_OPTIONS,\n-    useValue: {\n-      fullLibraryLoader: () => import('highlight.js'),\n-    },\n-  },\n-])\n-  .bootstrapModule(AppModule)\n-  .catch((err) => console.error(err));\n+\n+platformBrowserDynamic().bootstrapModule(AppModule)\n+  .catch(err => console.error(err));\n"
+                },
+                {
+                    "date": 1692322965535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,15 @@\n import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n-\n+import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\n import { AppModule } from './app/app.module';\n \n-\n-platformBrowserDynamic().bootstrapModule(AppModule)\n+platformBrowserDynamic().bootstrapModule(AppModule, {\n+  providers: [\n+    {\n+      provide: HIGHLIGHT_OPTIONS,\n+      useValue: {\n+        fullLibraryLoader: () => import('highlight.js')\n+      }\n+    }\n+  ]\n+})\n   .catch(err => console.error(err));\n"
+                },
+                {
+                    "date": 1692323308769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,12 @@\n import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n-import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\n+import {\n+  HighlightAutoResult,\n+  HighlightLoader,\n+  HighlightModule,\n+  HighlightOptions,\n+  HIGHLIGHT_OPTIONS,\n+} from 'ngx-highlightjs';\n import { AppModule } from './app/app.module';\n \n platformBrowserDynamic().bootstrapModule(AppModule, {\n   providers: [\n"
                 }
             ],
             "date": 1692219102120,
