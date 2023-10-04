@@ -14,6 +14,12 @@ import { ChildComponent } from './change-detection-dashboard/child/child.compone
 import { IoDashboardComponent } from './io-dashboard/io-dashboard.component';
 import { HighlightModule } from 'ngx-highlightjs';
 import { PlaygroundComponent } from './playground/playground.component';
+import { KeywordsComponent } from './keywords/keywords.component';
+import { SubscribeComponent } from './subscribe/subscribe.component';
+import { SubjectsComponent } from './subjects/subjects.component';
+import { ComponentCommunicationComponent } from './component-communication/component-communication.component';
+import { ComponentAComponent } from './component-communication/component-a/component-a.component';
+import { ComponentBComponent } from './component-communication/component-b/component-b.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -26,7 +32,13 @@ import { PlaygroundComponent } from './playground/playground.component';
     SignalsDashboardComponent,
     ChildComponent,
     IoDashboardComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
+    KeywordsComponent,
+    SubscribeComponent,
+    SubjectsComponent,
+    ComponentCommunicationComponent,
+    ComponentAComponent,
+    ComponentBComponent
   ],
   imports: [
     FormsModule,

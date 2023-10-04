@@ -1,0 +1,53 @@
+<div class="node">
+    <pre><code class="" [highlight]="code"></code></pre>
+    <p>In programming, particularly with libraries such as RxJS, Subjects are a special type of Observable that can
+        multicast to many Observers. Here are some types of Subjects and their characteristics:</p>
+    <div>
+        <div class="keyword">
+            <h2>Subject:</h2>
+            <div><strong>Technical:</strong>
+                <p> A type of Observable that can multicast to many Observers. Values are sent
+                    to
+                    all subscribers equally, with no replay of old values.</p>
+            </div>
+            <div><strong>Analogy:</strong>
+                <p>Pure live TV, if late you missed it.</p>
+            </div>
+        </div>
+        <div class="keyword">
+            <h2>BehaviorSubject:</h2>
+            <div><strong>Technical:</strong>
+                <p> Similar to a Subject, but it stores the latest value emitted to its
+                    consumers, and whenever a new Observer subscribes, it will immediately receive the "current value"
+                    from
+                    the BehaviorSubject.</p>
+            </div>
+            <div><strong>Analogy:</strong>
+                <p> Your 'currently watching list', always on the latest episode.</p>
+            </div>
+        </div>
+        <div class="keyword">
+            <h2>ReplaySubject:</h2>
+            <div><strong>Technical:</strong>
+                <p>Similar to a BehaviorSubject but it can also record a part of the
+                    Observable
+                    execution and replay it to new subscribers.</p>
+            </div>
+            <div><strong>Analogy:</strong>
+                <p> Replaying episodes missed.</p>
+            </div>
+        </div>
+        <div class="keyword">
+            <h2>AsyncSubject:</h2>
+            <div><strong>Technical:</strong>
+                <p>It only emits the last value of the Observable execution (and only the last
+                    value) and only if the Observable completes.</p>
+            </div>
+            <div><strong>Analogy:</strong>
+                <p>All about the season finale reveal.</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>

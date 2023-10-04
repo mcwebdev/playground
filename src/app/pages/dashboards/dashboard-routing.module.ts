@@ -6,6 +6,10 @@ import { ChangeDetectionDashboardComponent } from './change-detection-dashboard/
 import { RxjsDashboardComponent } from './rxjs-dashboard/rxjs-dashboard.component';
 import { SignalsDashboardComponent } from './signals-dashboard/signals-dashboard.component';
 import { PlaygroundComponent } from './playground/playground.component';
+import { KeywordsComponent } from './keywords/keywords.component';
+import { SubscribeComponent } from './subscribe/subscribe.component';
+import { SubjectsComponent } from './subjects/subjects.component';
+import { ComponentCommunicationComponent } from './component-communication/component-communication.component';
 const routes: Routes = [
     {
         path: '',
@@ -30,6 +34,22 @@ const routes: Routes = [
             {
                 path: 'playground',
                 component: PlaygroundComponent,
+            },
+            {
+                path: 'keywords',
+                component: KeywordsComponent,
+            },
+            {
+                path: 'subscribe',
+                component: SubscribeComponent,
+            },
+            {
+                path: 'subjects',
+                component: SubjectsComponent,
+            },
+            {
+                path: 'componentCommunication',
+                component: ComponentCommunicationComponent,
             },
         ],
     },

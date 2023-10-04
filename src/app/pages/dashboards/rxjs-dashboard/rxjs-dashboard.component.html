@@ -1,3 +1,111 @@
+<h1>Delving into Execution Order: Angular, Microtask Queue and RxJS</h1>
+
+<p>When working with Angular, understanding the execution order of asynchronous tasks is crucial for optimizing
+    performance and resolving race conditions. The interplay between Microtask Queue, RxJS, and Angular is central to
+    effective code management and application responsiveness.</p>
+
+<ul>
+    <li>
+        <h2>Microtask versus Macrotask:</h2>
+        <p>Observables are classified as microtasks and execute faster than macrotasks like <code>setTimeout</code>.</p>
+    </li>
+    <li>
+        <h2>RxJS Asynchronicity:</h2>
+        <p>Observable values are processed after promises, affecting the execution order of asynchronous operations.</p>
+    </li>
+    <li>
+        <h2>Change Detection:</h2>
+        <p>Angular's change detection mechanism runs after the microtask queue is emptied, ensuring timely view updates.
+        </p>
+    </li>
+    <li>
+        <h2>Zone.js:</h2>
+        <p>This library monitors asynchronous operations, triggering Angular's change detection after the microtask
+            queue is emptied.</p>
+    </li>
+</ul>
+
+<h2>Execution Sequence Example:</h2>
+<ul class="sequence-list">
+    <li>User interaction triggers an event, like a button click.</li>
+    <li>An API call is made in response to the event.</li>
+    <li>Promises and Observables are placed in the Microtask Queue, while <code>setTimeout</code> functions are placed
+        in the Macrotask Queue.</li>
+    <li>In the Microtask Queue, promises resolve first, followed by the emission of values from Observables.</li>
+    <li>RxJS processes the emitted data.</li>
+    <li>Angular checks for changes and updates the view if necessary.</li>
+    <li>The UI is updated with new data.</li>
+    <li><code>setTimeout</code> functions in the Macrotask Queue are executed.</li>
+</ul>
+
+<p>Observables are microtasks by default, but RxJS schedulers can change this behavior. Understanding these mechanisms
+    can significantly improve performance optimizations and aid in resolving race conditions, leading to more robust and
+    efficient Angular applications.</p>
+<h1>Delving into Execution Order: Angular, Microtask Queue and RxJS</h1>
+
+<p>When working with Angular, understanding the execution order of asynchronous tasks is crucial for optimizing
+    performance and resolving race conditions. The interplay between Microtask Queue, RxJS, and Angular is central to
+    effective code management and application responsiveness.</p>
+
+<ul>
+    <li>
+        <h2>Microtask versus Macrotask:</h2>
+        <p>Observables are classified as microtasks and execute faster than macrotasks like <code>setTimeout</code>.</p>
+    </li>
+    <li>
+        <h2>RxJS Asynchronicity:</h2>
+        <p>Observable values are processed after promises, affecting the execution order of asynchronous operations.</p>
+    </li>
+    <li>
+        <h2>Change Detection:</h2>
+        <p>Angular's change detection mechanism runs after the microtask queue is emptied, ensuring timely view updates.
+        </p>
+    </li>
+    <li>
+        <h2>Zone.js:</h2>
+        <p>This library monitors asynchronous operations, triggering Angular's change detection after the microtask
+            queue is emptied.</p>
+    </li>
+</ul>
+
+<h2>Execution Sequence Example:</h2>
+<ul class="sequence-list">
+    <li>User interaction triggers an event, like a button click.</li>
+    <li>An API call is made in response to the event.</li>
+    <li>Promises and Observables are placed in the Microtask Queue, while <code>setTimeout</code> functions are placed
+        in the Macrotask Queue.</li>
+    <li>In the Microtask Queue, promises resolve first, followed by the emission of values from Observables.</li>
+    <li>RxJS processes the emitted data.</li>
+    <li>Angular checks for changes and updates the view if necessary.</li>
+    <li>The UI is updated with new data.</li>
+    <li><code>setTimeout</code> functions in the Macrotask Queue are executed.</li>
+</ul>
+
+<p>Observables are microtasks by default, but RxJS schedulers can change this behavior. Understanding these mechanisms
+    can significantly improve performance optimizations and aid in resolving race conditions, leading to more robust and
+    efficient Angular applications.</p>
+
+<h2>Understanding Race Conditions</h2>
+<p>Race conditions occur in software when two or more operations must execute in a specific sequence, but the program's
+    code doesn't ensure this order, leading to unpredictable behavior. This issue is prevalent in multithreaded or
+    distributed systems where multiple processes or threads execute concurrently and share resources.</p>
+
+<ul class="race-points">
+    <li><strong>Concurrency:</strong> Race conditions arise from concurrent operations accessing shared resources
+        without proper synchronization.</li>
+    <li><strong>Unpredictable Behavior:</strong> The outcome of a race condition depends on the exact timing of the
+        competing operations, making the program's behavior inconsistent.</li>
+    <li><strong>Potential Consequences:</strong> Race conditions can lead to minor glitches, incorrect program output,
+        severe security vulnerabilities, or system crashes.</li>
+    <li><strong>Prevention and Detection:</strong> Detecting and preventing race conditions require careful design and
+        testing, often using locks or other synchronization primitives to control the order of operations.</li>
+</ul>
+
+<p>In the context of Angular and the execution order of asynchronous tasks, understanding how different parts of the
+    code interact and ensuring they execute in the correct order can help prevent race conditions, thus making the
+    application more reliable and bug-free.</p>
+
+
 <div>
     <p>RXJS Scheduler example</p>
     <div class="fxLayoutRow">
